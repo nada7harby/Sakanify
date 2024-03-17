@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../img/Final_2_with_less_ distance.png";
 import logo_user from "../img/user.png";
 import "../css/Nav.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function BasicExample() {
   return (
