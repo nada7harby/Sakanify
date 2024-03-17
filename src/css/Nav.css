@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
+
+nav {
+  background-color: rgb(228 224 220 / 67%) !important;
+  direction: rtl;
+}
+
+/* .brand {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #03a4ed !important;
+  float: left;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.brand span {
+  color: red;
+} */
+.navbar-nav {
+  direction: rtl;
+}
+.navbar-nav a {
+  color: rgb(34, 33, 33);
+  text-decoration: none;
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
+.active {
+  color: #f3c716 !important;
+  text-decoration: underline;
+}
+.navbar-brand img {
+  width: 120px;
+}
+.Login_tab {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 10px;
+  justify-content: space-around;
+  position: relative;
+}
+.Login_tab img {
+  width: 30px;
+  border-radius: 50%;
+}
+.dropdown-toggle::after {
+  color: #fff;
+  display: none;
+}
+.dropdown-menu {
+  position: absolute;
+  left: 5% !important;
+  top: 105% !important;
+  background-color: #fff;
+  text-align: center;
+}
+.dropdown-menu li{
+               font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
