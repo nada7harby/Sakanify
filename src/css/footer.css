@@ -1,0 +1,44 @@
+img {
+  width: 90%;
+}
+.footer {
+  background-color: #1a284e;
+  padding: 30px 0;
+}
+
+.pages {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.pages ul {
+  direction: rtl;
+  list-style: none;
+  text-align: start;
+}
+.pages ul li {
+  color: #fff;
+  line-height: 40px;
+}
+.pages ul li a {
+  text-decoration: none;
+  color: #fff;
+  direction: rtl;
+  font-size: 18px;
+}
+.what {
+  color: #fff;
+  direction: rtl;
+  text-align: start;
+  padding: 30px 0;
+}
+.pay {
+  width: 150px;
+}
+@media (max-width: 443px) {
+  .pay {
+    width: 100%;
+  }
+}
