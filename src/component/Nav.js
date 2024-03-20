@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import logo from "../img/Final_2_with_less_ distance.png";
 import logo_user from "../img/user.png";
 import "../css/Nav.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function BasicExample() {
   return (
@@ -10,7 +9,7 @@ function BasicExample() {
       <div className="container">
         <Link className="navbar-brand" to="/">
           {" "}
-          <img src={logo} />
+          <img src={logo} alt="img" />
         </Link>
 
         <button
@@ -52,7 +51,7 @@ function BasicExample() {
           </ul>
           <div class=" Login_tab nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             <span className="navbar-toggler-icon"></span>
-              <img src={logo_user}/>
+              <img src={logo_user} alt="img"/>
           </div>
 
           <ul class="dropdown-menu">

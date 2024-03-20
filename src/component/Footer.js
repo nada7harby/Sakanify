@@ -14,7 +14,7 @@ function Footer() {
             <div className="col-lg-4 col-10">
               <img src={logo2} alt="Logo" />
             </div>
-            <div className="col-lg-2 pages col">
+            <div className="col-lg-3 pages col">
               <h3>صفحاتنا</h3>
               <ul>
                 <li>

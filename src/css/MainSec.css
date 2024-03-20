@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
+
+.mainSec {
+  /* height: 769px; */
+  padding: 80px 0;
+  position: relative;
+}
+.images1 {
+  flex-direction: column;
+}
+.cols-img {
+  flex-direction: row-reverse;
+  z-index: 2;
+}
+.row-img {
+  z-index: 2;
+}
+.col1-img {
+  /* direction: rtl; */
+}
+.images2 {
+  display: flex;
+  align-items: end;
+}
+.mainSec img {
+  width: 300px;
+  padding: 10px 0;
+}
+.Main1 {
+  border-top-right-radius: 110px;
+}
+.Main3 {
+  border-top-left-radius: 110px;
+}
+.main_content {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  direction: rtl;
+  position: relative;
+  z-index: 2;
+}
+.mainSec::after {
+  content: "";
+  height: 640px;
+  width: 34%;
+  background-color: #ddb20c;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 25px;
+  border-top-right-radius: 160px;
+}
+.main_content h1,
+p {
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
+.main_content h1 {
+  color: #1a284e;
+  font-weight: 700;
+}
+.main_content button {
+  background-color: #ddb20c;
+  border-radius: 50px 0px 50px 0px;
+  padding: 10px;
+  border: none;
+  width: 200px;
+  margin: 20px 0;
+  color: #1a284e;
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
+
+@media (max-width: 769px) {
+  .mainSec img {
+    width: 216%;
+  }
+  .Main1 {
+    border-top-right-radius: 80px;
+  }
+  .Main3 {
+    border-top-left-radius: 80px;
+  }
+  .mainSec::after {
+    width: 70%;
+  }
+  .mainSec-content {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 425px) {
+  .mainSec img {
+    width: 244%;
+  }
+  .Main1 {
+    border-top-right-radius: 80px;
+  }
+  .Main3 {
+    border-top-left-radius: 80px;
+  }
+  .mainSec::after {
+    height: 350px;
+    width: 80%;
+    position: absolute;
+    z-index: 0;
+    left: auto;
+    top: auto;
+    bottom: 0;
+    margin-top: 10px;
+  }
+}

@@ -3,6 +3,11 @@
 nav {
   background-color: rgb(228 224 220 / 67%) !important;
   direction: rtl;
+  z-index: 100;
+}
+nav.navbar {
+  position: fixed;
+  width: 100%;
 }
 
 /* .brand {
@@ -51,19 +56,19 @@ nav {
   width: 30px;
   border-radius: 50%;
 }
-.dropdown-toggle::after {
+nav .dropdown-toggle::after {
   color: #fff;
   display: none;
 }
-.dropdown-menu {
+nav .dropdown-menu {
   position: absolute;
-  left: 5% !important;
-  top: 105% !important;
+  left: 3% !important;
+  top: 90% !important;
   background-color: #fff;
   text-align: center;
 }
-.dropdown-menu li{
-               font-family: "Readex Pro", sans-serif;
+nav .dropdown-menu li {
+  font-family: "Readex Pro", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;

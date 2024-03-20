@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
+
+.cols-search {
+  padding: 20px;
+  background-color: #d5d5d5;
+  margin: 10px 0 50px 0;
+  box-shadow: 1px 1px 23px 2px #000;
+  border-radius: 10px;
+}
+.cols-search .btn-search {
+  background-color: #1a284e;
+  padding: 7px 35px;
+  border-radius: 10px;
+}
+.cols-search .btn-search {
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+  text-decoration: none;
+  color: #fff;
+}
+.cols-search .type-search.dropdown-toggle {
+  direction: rtl;
+  border: 1px solid #000000;
+  padding: 5px 0;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+  position: relative;
+}
+.cols-search .dropdown-toggle::after {
+  font-size: 28px;
+  margin-right: 9px;
+}
+.cols-search .type-search.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 200px;
+}
+.cols-search .dropdown-menu li {
+  text-align: center;
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
+.sohag {
+  padding: 3px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.sohag span {
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+  font-size: 20px;
+}
+
+.why-chosse {
+  direction: rtl;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.why-chosse-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+.why-chosse-content p{
+  font-size: 18px;
+}
+.why-chosse-content button{
+  margin: 10px 0;
+  padding: 13px 22px;
+  border-radius: 20px;
+  background-color: #1a284e;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
+
+.prons {
+  flex-direction: row-reverse;
+}
+.prons > div {
+  border: 1px solid #1a284e;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.prons div .img-prond {
+  direction: ltr;
+}
+.img-prond img {
+  padding: 8px;
+  border-radius: 20px;
+  background-color: #6f7075;
+}
+.prons > div .more {
+  color: #ddb20c;
+}
+.prons div h4 {
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+  color: #1a284e;
+}
+.first-prons {
+  background-color: #1a284e;
+  color: #fff;
+}
+.first-prons div h4 {
+  color: #fff;
+}
+@media (max-width: 378px) {
+  .cols-search .type-search.dropdown-toggle {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .cols-search .dropdown-toggle::after {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1023px) {
+  .why-chosse {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,299 @@
+.content-service {
+  padding: 110px 0 70px 0;
+  direction: rtl;
+  text-align: start;
+}
+.content-service h1 {
+  color: #1a284e;
+  padding: 20px 0;
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
+
+.left {
+  margin-top: 200px;
+  /* background-color: antiquewhite; */
+
+  border-right: 2px solid #000;
+}
+.right {
+  margin-top: 10px;
+  /* background-color: aqua; */
+
+  border-left: 2px solid #000;
+}
+.child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: right;
+  position: relative;
+  margin: 100px 0;
+}
+.child img {
+  width: 40%;
+}
+.left .child::after {
+  display: inline-block;
+  content: "";
+  width: 54%;
+  height: 3%;
+  position: absolute;
+  left: 80%;
+  top: 30%;
+  background-color: rgb(63, 9, 225);
+  z-index: 0;
+}
+
+.left .point1 {
+  position: absolute;
+  z-index: 2;
+  top: 28%;
+  left: 79%;
+  width: 6%;
+  height: 7%;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+.left .parent-span {
+  padding: 21px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  left: 130%;
+}
+.left .point2 {
+  position: absolute;
+  z-index: 2;
+  top: 18%;
+  left: 19%;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: rgb(43, 49, 226);
+}
+
+.right .row {
+  justify-content: center;
+}
+
+.right .child::after {
+  display: inline-block;
+  content: "";
+  width: 37%;
+  height: 3%;
+  position: absolute;
+  right: 80%;
+  top: 30%;
+  background-color: rgb(63, 9, 225);
+  z-index: 0;
+}
+.right .point1 {
+  position: absolute;
+  z-index: 2;
+  top: 28%;
+  right: 79%;
+  width: 6%;
+  height: 7%;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+.right .parent-span {
+  padding: 21px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: 26%;
+  right: 113%;
+}
+.right .point2 {
+  position: absolute;
+  z-index: 2;
+  top: 18%;
+  right: 19%;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: rgb(43, 49, 226);
+}
+.left .child1::after {
+  top: 32%;
+}
+.left .child1 .point1 {
+  top: 30%;
+}
+.right .child2::after {
+  top: 33%;
+}
+.right .child2 .point1 {
+  top: 31%;
+}
+.right .child3::after {
+  top: 33%;
+}
+.right .child3 .point1 {
+  top: 31%;
+}
+
+.right .child1::after,
+.right .child1 .point1,
+.right .child1 .point2 {
+  background-color: #7491b9;
+}
+.right .child1 h4 {
+  color: #7491b9;
+}
+.right .child2::after,
+.right .child2 .point1,
+.right .child2 .point2 {
+  background-color: #fdca76;
+}
+.right .child2 h4 {
+  color: #fdca76;
+}
+.right .child3::after,
+.right .child3 .point1,
+.right .child3 .point2 {
+  background-color: #c14ff1;
+}
+.right .child3 h4 {
+  color: #c14ff1;
+}
+.right .child4::after,
+.right .child4 .point1,
+.right .child4 .point2 {
+  background-color: #f5c9b6;
+}
+.right .child4 h4 {
+  color: #f5c9b6;
+}
+.right .child5::after,
+.right .child5 .point1,
+.right .child5 .point2 {
+  background-color: #fd93f2;
+}
+.right .child5 h4 {
+  color: #fd93f2;
+}
+.left .child1::after,
+.left .child1 .point1,
+.left .child1 .point2 {
+  background-color: #fd7ba3;
+}
+.left .child1 h4 {
+  color: #fd7ba3;
+}
+.left .child2::after,
+.left .child2 .point1,
+.left .child2 .point2 {
+  background-color: #4f5bad;
+}
+.left .child2 h4 {
+  color: #4f5bad;
+}
+
+.left .child3::after,
+.left .child3 .point1,
+.left .child3 .point2 {
+  background-color: #6e6dbb;
+}
+.left .child3 h4 {
+  color: #6e6dbb;
+}
+.left .child4::after,
+.left .child4 .point1,
+.left .child4 .point2 {
+  background-color: #a0bff2;
+}
+.left .child4 h4 {
+  color: #a0bff2;
+}
+
+.left .child5::after,
+.left .child5 .point1,
+.left .child5 .point2 {
+  background-color: #a0bff2;
+}
+.left .child5 h4 {
+  color: #a0bff2;
+}
+
+@media (max-width: 500px) {
+  .child img {
+    width: 90%;
+  }
+  .child p {
+    font-size: 12px;
+  }
+  .left .child::after {
+    width: 38%;
+    height: 2%;
+    left: 100%;
+    top: 30%;
+  }
+
+  .left .point1 {
+    top: 29%;
+    left: 95%;
+    width: 6%;
+    height: 4%;
+  }
+  .left .parent-span {
+    top: 26%;
+    left: 129%;
+  }
+  .left .point2 {
+    top: 18%;
+    left: 19%;
+    width: 26px;
+    height: 26px;
+  }
+
+  .right .child::after {
+    width: 32%;
+    height: 2%;
+    position: absolute;
+    right: 86%;
+    top: 30%;
+  }
+  .right .point1 {
+    top: 29%;
+    right: 82%;
+    width: 5%;
+    height: 4%;
+  }
+  .right .parent-span {
+    top: 26%;
+    right: 103%;
+  }
+  .right .child2::after {
+    top: 33%;
+  }
+  .right .child2 .point1 {
+    top: 32%;
+  }
+  .right .child3::after {
+    top: 33%;
+  }
+  .right .child3 .point1 {
+    top: 32%;
+  }
+  .left .child1::after {
+    top: 33%;
+  }
+  .left .child1 .point1 {
+    top: 32%;
+  }
+  .left .parent-span {
+    left: 120%;
+  }
+  .right .child2 {
+    margin: 10px 0;
+  }
+}
