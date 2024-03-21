@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
 
 nav {
-  background-color: rgb(228 224 220 / 67%) !important;
+  background-color: #d9d9d9db !important;
   direction: rtl;
   z-index: 100;
 }
