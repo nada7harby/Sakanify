@@ -16,7 +16,7 @@
 .pages ul {
   direction: rtl;
   list-style: none;
-  text-align: start;
+  text-align: cemter;
 }
 .pages ul li {
   color: #fff;
@@ -31,7 +31,7 @@
 .what {
   color: #fff;
   direction: rtl;
-  text-align: start;
+  text-align: center;
   padding: 30px 0;
 }
 .pay {
