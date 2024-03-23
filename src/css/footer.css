@@ -14,9 +14,9 @@
   justify-content: center;
 }
 .pages ul {
-  direction: rtl;
+ direction: rtl;
   list-style: none;
-  text-align: cemter;
+  text-align: center;
 }
 .pages ul li {
   color: #fff;
@@ -30,9 +30,12 @@
 }
 .what {
   color: #fff;
-  direction: rtl;
-  text-align: center;
-  padding: 30px 0;
+ direction: rtl;
+    text-align: center;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .pay {
   width: 150px;
