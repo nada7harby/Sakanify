@@ -34,8 +34,8 @@
   margin: 100px 0;
 }
 .child p{
- text-align: justify;
-    direction: rtl;
+ text-align: center;
+   
 }
 .child img {
   width: 40%;
