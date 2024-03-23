@@ -74,3 +74,20 @@ nav .dropdown-menu li {
   font-style: normal;
   font-variation-settings: "HEXP" 0;
 }
+@media (max-width: 960px) {
+  nav {
+    background-color: #d9d9d9 !important;
+    direction: rtl;
+    z-index: 100;
+    text-align: center;
+  }
+  nav .dropdown-menu {
+    position: absolute;
+    left: 20% !important;
+    top: 96% !important;
+    background-color: #fff;
+    text-align: center;
+    width: 61%;
+    z-index: 0;
+  }
+}
