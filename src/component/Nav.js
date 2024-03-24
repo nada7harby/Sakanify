@@ -49,15 +49,15 @@ function BasicExample() {
               </Link>
             </li>
           </ul>
-          <div class=" Login_tab nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+          <div className=" Login_tab nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             <span className="navbar-toggler-icon"></span>
               <img src={logo_user} alt="img"/>
           </div>
 
-          <ul class="dropdown-menu">
-            <li><Link class="dropdown-item" to="/Register">تسجيل الدخول</Link></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><Link class="dropdown-item" to="/Login" >انشاء حساب جديد</Link></li>
+          <ul className="dropdown-menu">
+            <li><Link className="dropdown-item" to="/Register">تسجيل الدخول</Link></li>
+            <li><hr className="dropdown-divider"/></li>
+            <li><Link className="dropdown-item" to="/Login" >انشاء حساب جديد</Link></li>
           </ul>
         </div>
       </div>

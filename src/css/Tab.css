@@ -1,0 +1,106 @@
+.tab-pane .card {
+  border: none !important;
+}
+.tab-pane .card .card-img-top {
+  height: 290px;
+  border-radius: 20px;
+}
+.tab-pane .card .card-body {
+  direction: rtl;
+  position: relative;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+}
+.tab-pane .card .rate {
+  position: absolute;
+  top: 10%;
+  left: 9%;
+}
+.tab-pane .card .rate span {
+  padding: 0 5px;
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
+.tab-pane .card {
+  position: relative;
+}
+.tab-pane .heart_fav {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  padding: 10px;
+  cursor: pointer;
+}
+.tab-pane .heart_fav span {
+  color: white;
+}
+.img-card {
+  position: relative;
+}
+.book {
+  position: absolute;
+  right: 5%;
+  bottom: 1%;
+  width: 20%;
+  height: 28%;
+}
+.OwImg_book {
+  position: absolute;
+  width: 15%;
+  height: 19%;
+
+  right: 9%;
+  bottom: 6%;
+  border-radius: 50%;
+}
+.card .active {
+  text-decoration: none !important;
+}
+.card .fa-star {
+  color: rgb(211, 163, 91);
+}
+.modal-body {
+  direction: rtl;
+}
+.OwImg_modal {
+  width: 100%;
+  height: 81%;
+  border-radius: 50%;
+}
+.modal-body .Oimg {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.info-owner {
+  background-color: #d9d9d9;
+  border-radius: 0 40px 0px 40px;
+  padding: 40px 20px;
+}
+.modal-body .info-owner-more {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #8d8d8d;
+}
+.modal-body .info-owner-more div {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #8d8d8d;
+  padding-bottom: 5px;
+}
+.info_contact div {
+  padding: 10px 0;
+}
+.info_contact div i {
+  font-size: 23px;
+  padding-left: 12px;
+}

@@ -27,21 +27,21 @@ function SearchBar() {
                 >
                   نوع الخدمة
                 </div>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
-                    <Link class="dropdown-item">غرفة لفرد</Link>
+                    <Link className="dropdown-item">غرفة لفرد</Link>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link class="dropdown-item">غرفة لفردين</Link>
+                    <Link className="dropdown-item">غرفة لفردين</Link>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link class="dropdown-item">غرفة لثلاث افراد</Link>
+                    <Link className="dropdown-item">غرفة لثلاث افراد</Link>
                   </li>
                 </ul>
               </div>
@@ -55,33 +55,33 @@ function SearchBar() {
                 >
                   منطقتك{" "}
                 </div>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
-                    <Link class="dropdown-item">كوامل</Link>
+                    <Link className="dropdown-item">كوامل</Link>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link class="dropdown-item">محافظة </Link>
+                    <Link className="dropdown-item">محافظة </Link>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link class="dropdown-item"> موقف بحري</Link>
+                    <Link className="dropdown-item"> موقف بحري</Link>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link class="dropdown-item"> الزهراء </Link>
+                    <Link className="dropdown-item"> الزهراء </Link>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link class="dropdown-item"> شارع الجمهورية </Link>
+                    <Link className="dropdown-item"> شارع الجمهورية </Link>
                   </li>
                 </ul>
               </div>
