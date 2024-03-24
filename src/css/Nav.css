@@ -36,7 +36,7 @@ nav.navbar {
   font-style: normal;
   font-variation-settings: "HEXP" 0;
 }
-.active {
+nav.active {
   color: #f3c716 !important;
   text-decoration: underline;
 }
