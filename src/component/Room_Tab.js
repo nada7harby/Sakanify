@@ -230,7 +230,7 @@ function Room_Tab() {
                 </div>
               </Modal.Body>
               <Modal.Footer>
-                <Button variant="secondary" onClick={() => handleClose(ele.id)}>
+                <Button variant="warning" onClick={() => handleClose(ele.id)}>
                   Close
                 </Button>
                 {/* <Button variant="primary" onClick={handleClose}>
