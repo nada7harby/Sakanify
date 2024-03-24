@@ -25,6 +25,11 @@
   text-decoration: underline;
   color: rgb(199 180 55);
 }
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  text-decoration: none;
+  color: rgb(199 180 55);
+}
 .tab-pane .card .rate {
   position: absolute;
   top: 10%;
