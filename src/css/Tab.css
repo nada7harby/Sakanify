@@ -15,11 +15,13 @@
   direction: rtl;
 }
 .nav-tabs a {
-  font-family: "Readex Pro", sans-serif;
+   font-family: "Readex Pro", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "HEXP" 0;
+  color: #1a284e;
+
 }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
   text-decoration: underline;
