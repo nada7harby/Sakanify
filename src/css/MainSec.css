@@ -32,6 +32,9 @@
 .Main3 {
   border-top-left-radius: 110px;
 }
+.mainSec-content{
+  padding-top: 80px;
+}
 .main_content {
   text-align: right;
   display: flex;
@@ -41,6 +44,7 @@
   position: relative;
   z-index: 2;
 }
+
 .mainSec::after {
   content: "";
   height: 640px;
@@ -49,7 +53,7 @@
   position: absolute;
   z-index: 0;
   left: 0;
-  top: 25px;
+  top: 105px;
   border-top-right-radius: 160px;
 }
 .main_content h1,
@@ -95,6 +99,7 @@ p {
   }
   .mainSec-content {
     flex-direction: column-reverse;
+    
   }
 }
 
