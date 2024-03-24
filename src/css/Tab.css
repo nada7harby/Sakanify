@@ -125,3 +125,9 @@
 .fa-heart{
   font-size:20px;
 }
+@media (max-width:395px) {
+
+  .nav-tabs a{
+    font-size: 11px;
+  }
+}
