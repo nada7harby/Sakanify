@@ -14,6 +14,17 @@
   justify-content: center;
   direction: rtl;
 }
+.nav-tabs a {
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
+.nav-tabs .nav-link.active {
+  text-decoration: none;
+  color: rgb(199 180 55);
+}
 .tab-pane .card .rate {
   position: absolute;
   top: 10%;
