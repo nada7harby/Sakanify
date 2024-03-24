@@ -21,8 +21,8 @@
   font-style: normal;
   font-variation-settings: "HEXP" 0;
 }
-.nav-tabs .nav-link.active {
-  text-decoration: none;
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  text-decoration: underline;
   color: rgb(199 180 55);
 }
 .tab-pane .card .rate {
