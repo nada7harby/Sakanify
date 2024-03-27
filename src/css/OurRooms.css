@@ -6,6 +6,9 @@
   font-family: Inter;
   direction: rtl;
 }
+.Rooms p{
+  text-align:center;
+}
 
 .Div {
   /* border-radius: 15px;
