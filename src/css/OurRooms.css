@@ -6,9 +6,7 @@
   font-family: Inter;
   direction: rtl;
 }
-.Rooms .modal-body p{
-  text-align:center;
-}
+
 
 .Div {
   /* border-radius: 15px;
@@ -220,6 +218,7 @@
   font-weight: 338;
   line-height: 23px;
   color: rgba(141, 141, 141, 1);
+  text-align:center;
 }
 .Owner-model-personal-data {
   font-family: Inter;
