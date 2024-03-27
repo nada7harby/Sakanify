@@ -6,7 +6,7 @@
   font-family: Inter;
   direction: rtl;
 }
-.Rooms p{
+.Rooms .modal-body p{
   text-align:center;
 }
 
