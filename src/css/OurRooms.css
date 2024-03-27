@@ -1,0 +1,224 @@
+/*  ==============================Our Rooms=========================================  */
+
+/*  ============================== Search Bar =========================================  */
+
+.Div {
+  /* border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+    width: fit-content;
+    border: 1px solid #8d8d8d; */
+
+  width: fit-content;
+  height: 130px;
+  /* top: 133px;
+    left: 395px; */
+  border-radius: 30px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(141, 141, 141, 1);
+}
+.Div h4 {
+  color: rgba(0, 0, 0, 1);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+}
+.SearchLine {
+  width: 50px;
+  top: 175px;
+  left: 774px;
+  border: 1;
+  transform: rotate(-90deg);
+  border: 1px solid rgba(141, 141, 141, 1);
+}
+.SearchIconDiv {
+  width: 80px;
+  height: 80px;
+
+  top: 158px;
+  left: 425px;
+  background: rgba(26, 40, 78, 1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 14px;
+}
+@media only screen and (max-width: 426px) {
+  .SearchIconDiv {
+    width: 50px;
+    height: 50px;
+    top: 151px;
+    left: 32px;
+    padding: 10px;
+    background: rgba(26, 40, 78, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14px;
+    cursor: pointer;
+  }
+  .Search-icon {
+    width: 15px;
+    height: 15px;
+    top: 158px;
+    left: 40px;
+  }
+  .search-inp::placeholder {
+    font-size: 8px !important;
+    cursor: pointer;
+  }
+}
+.Search-icon {
+  width: 40px;
+  height: 40px;
+  top: 178px;
+  left: 445px;
+  cursor: pointer;
+}
+
+/*  ============================== Rooms =========================================  */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 321px;
+  height: 305px;
+  border-radius: 15px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  /* background: rgba(26, 40, 78, 1); */
+  background: #fff;
+}
+/* .swiper-pagination .swiper-pagination-bullet-active {
+  background: rgba(255, 255, 255, 0.8); /* Change this to your desired color 
+} */
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.Card {
+  background-color: transparent !important;
+  font-family: Inter;
+}
+.Card-Title {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  line-height: 24.2px !important;
+}
+.Card-Text {
+  font-size: 16px !important;
+  font-weight: 350 !important;
+  line-height: 19.36px !important;
+  color: rgba(0, 0, 0, 1) !important;
+}
+.Room-Price {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 24.2px !important;
+  color: rgba(0, 0, 0, 1) !important;
+}
+.Star-img {
+  width: 25px;
+  height: 25px;
+  top: 355px;
+  left: 81px;
+  gap: 0px;
+  opacity: 0px;
+  margin-left: 3px;
+}
+.OurRooms-Heart-icon {
+  position: absolute;
+  font-size: 1.9rem;
+  top: 10px;
+  left: 15px;
+  z-index: 11;
+  cursor: pointer;
+  /* color:rgba(0, 0, 0, 0.8); */
+  /* color: rgba(255, 255, 255, 0.919); */
+}
+.Owner-book {
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  top: 200px;
+  /* right: 2px; */
+  z-index: 11;
+  transition: 0.3s;
+}
+.Owner-Img {
+  position: absolute;
+  z-index: 12;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  top: 227px;
+  right: 28px;
+}
+.Owner-book:hover {
+  /* .Owner-book:hover .Owner-Img{ */
+  rotate: 10deg;
+}
+.owner-model-div {
+  background: rgba(217, 217, 217, 1);
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: 1px 1px 8px rgba(127, 125, 125, 0.827);
+}
+.Owner-Model-Img {
+  width: 160px;
+  height: 160px;
+  top: 89px;
+  left: 210px;
+  border-radius: 50%;
+}
+.host-icon {
+  width: 15px;
+  height: 15px;
+  top: 249px;
+  left: 308px;
+}
+.font-Weigth {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 29.05px;
+}
+.owner-details-model {
+  line-height: 37px;
+  padding-right: 20px;
+}
+.Font-Color {
+  font-size: 20px;
+  font-weight: 338;
+  line-height: 23px;
+  color: rgba(141, 141, 141, 1);
+}
+.Owner-model-personal-data {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 335;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 1);
+}
