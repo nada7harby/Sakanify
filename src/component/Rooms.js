@@ -34,7 +34,7 @@ import Room15 from "../img/Room15.png";
 //Elements images
 import starImg from "../img/Full-star.png";
 import HalfStar from "../img/Half-star.png";
-import BookImg from "../img/book.png";
+import BookImg from "../img/Book.png";
 import SearchIcon from "../img/Search.png";
 import HostIcon from "../img/host-icon.png";
 

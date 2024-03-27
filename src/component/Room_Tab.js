@@ -9,7 +9,7 @@ import room3 from "../img/room3.png";
 import room4 from "../img/room4.png";
 import room5 from "../img/room5.png";
 import room6 from "../img/room6.png";
-import book from "../img/book.png";
+import book from "../img/Book.png";
 import oImg1 from "../img/ow1.png";
 import oImg2 from "../img/ow2.png";
 import oImg3 from "../img/ow3.png";
@@ -248,7 +248,7 @@ function Room_Tab() {
           <div className="card-body">
             <h5 className="card-title">{ele.title}</h5>
             <p className="card-text">{ele.describtion}</p>
-            <p className="card-text">{ele.price}م.ج</p>
+            <p className="card-text">{ele.price}ج.م</p>
 
             <div className="rate">
               <span>
