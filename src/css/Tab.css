@@ -15,7 +15,7 @@
   direction: rtl;
 }
 .nav-tabs a {
-   font-family: "Readex Pro", sans-serif;
+  font-family: "Readex Pro", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -23,10 +23,7 @@
   color: #1a284e;
 
 }
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-  text-decoration: underline;
-  color: rgb(199 180 55);
-}
+
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
   text-decoration: none;
@@ -37,6 +34,7 @@
   top: 10%;
   left: 9%;
 }
+
 .tab-pane .card .rate span {
   padding: 0 5px;
   font-family: "Readex Pro", sans-serif;
@@ -63,10 +61,10 @@
 }
 .book {
   position: absolute;
-  right: 5%;
-  bottom: 1%;
-  width: 20%;
-  height: 28%;
+  right: -2%;
+  bottom: -3%;
+  width: 41%;
+  height: 38%;
 }
 .OwImg_book {
   position: absolute;
@@ -121,9 +119,6 @@
 .info_contact div i {
   font-size: 23px;
   padding-left: 12px;
-}
-.fa-heart{
-  font-size:20px;
 }
 @media (max-width:395px) {
 

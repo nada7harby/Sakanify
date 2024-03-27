@@ -166,13 +166,13 @@
 }
 .Owner-book {
   position: absolute;
-  width: 69px;
-  height: 90px;
-  top: 200px;
-  right: 4%;
-  transform: rotate(180deg);
-  z-index: 11;
-  transition: 0.3s;
+    width: 100px;
+    height: 90px;
+    top: 200px;
+    right: 0%;
+    /* transform: rotate(180deg); */
+    z-index: 11;
+    transition: 0.3s;
 }
 .Owner-Img {
   position: absolute;
