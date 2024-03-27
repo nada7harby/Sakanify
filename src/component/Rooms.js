@@ -12,38 +12,38 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import Alert from 'react-bootstrap/Alert';
 
 //Rooms images
-import Room1 from "../Imgs/Room1.jpg";
-import Room2 from "../Imgs/Room2.png";
-import Room3 from "../Imgs/Room3.png";
-import Room4 from "../Imgs/Room4.png";
-import Room5 from "../Imgs/Room5.png";
-import Room6 from "../Imgs/Room6.png";
-import Room7 from "../Imgs/Room7.png";
-import Room8 from "../Imgs/Room8.png";
-import Room9 from "../Imgs/Room9.jpeg";
-import Room10 from "../Imgs/Room10.jpeg";
-import Room11 from "../Imgs/Room11.jpeg";
-import Room12 from "../Imgs/Room12.png";
-import Room13 from "../Imgs/Room13.png";
-import Room14 from "../Imgs/Room14.png";
-import Room15 from "../Imgs/Room15.png";
+import Room1 from "../img/Room1.jpg";
+import Room2 from "../img/Room2.png";
+import Room3 from "../img/Room3.png";
+import Room4 from "../img/Room4.png";
+import Room5 from "../img/Room5.png";
+import Room6 from "../img/Room6.png";
+import Room7 from "../img/Room7.png";
+import Room8 from "../img/Room8.png";
+import Room9 from "../img/Room9.jpeg";
+import Room10 from "../img/Room10.jpeg";
+import Room11 from "../img/Room11.jpeg";
+import Room12 from "../img/Room12.png";
+import Room13 from "../img/Room13.png";
+import Room14 from "../img/Room14.png";
+import Room15 from "../img/Room15.png";
 
 //Elements images
-import starImg from "../Imgs/Full-star.png";
-import HalfStar from "../Imgs/Half-star.png";
-import BookImg from "../Imgs/Book.png";
-import SearchIcon from "../Imgs/Search.png";
-import HostIcon from "../Imgs/host-icon.png";
+import starImg from "../img/Full-star.png";
+import HalfStar from "../img/Half-star.png";
+import BookImg from "../img/Book.png";
+import SearchIcon from "../img/Search.png";
+import HostIcon from "../img/host-icon.png";
 
 //Owners images
-import Owner1 from "../Imgs/Owner1.png";
-import Owner2 from "../Imgs/Owner2.png";
-import Owner3 from "../Imgs/Owner3.png";
-import Owner4 from "../Imgs/Owner4.png";
-import Owner5 from "../Imgs/Owner5.png";
-import Owner6 from "../Imgs/Owner6.png";
-import Owner7 from "../Imgs/Owner7.png";
-import Owner8 from "../Imgs/Owner8.png";
+import Owner1 from "../img/Owner1.png";
+import Owner2 from "../img/Owner2.png";
+import Owner3 from "../img/Owner3.png";
+import Owner4 from "../img/Owner4.png";
+import Owner5 from "../img/Owner5.png";
+import Owner6 from "../img/Owner6.png";
+import Owner7 from "../img/Owner7.png";
+import Owner8 from "../img/Owner8.png";
 import "../Css/OurRooms.css";
 function Rooms() {
   const rooms = [
