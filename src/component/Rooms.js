@@ -392,8 +392,9 @@ function Rooms() {
                 <img src={room.image.image3} alt="logo" />
               </SwiperSlide>
             </Swiper>
-            <h4 className="OurRooms-Heart-icon">
+            <h4>
               <FontAwesomeIcon
+                className="OurRooms-Heart-icon"
                 icon={faHeart}
                 onClick={() => toggleRoom(room)}
                 style={{
