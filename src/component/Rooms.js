@@ -1,6 +1,9 @@
 import { Container, Card, Row, Col } from "react-bootstrap";
 // Import Swiper styles
 import "swiper/css";
+import Nav from "./Nav"
+import Footer from "./Footer";
+
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { useState } from "react";
@@ -515,6 +518,7 @@ function Rooms() {
   console.log(searchInitiated);
   return (
     <div className="Rooms">
+     <Nav></Nav>
       <Container className="py-4">
         <div className="Div  mx-auto  d-flex justify-content-center align-items-center">
           <div>
@@ -553,6 +557,7 @@ function Rooms() {
         {/* <Row>{searchInitiated ? RoomsAfterSearch() : DrawRooms(rooms)}</Row> */}
         <Row>{ RoomsAfterSearch() }</Row>
       </Container>
+                 <Footer></Footer>
     </div>
   );
 }
