@@ -44,7 +44,7 @@ import Owner5 from "../img/Owner5.png";
 import Owner6 from "../img/Owner6.png";
 import Owner7 from "../img/Owner7.png";
 import Owner8 from "../img/Owner8.png";
-import "../Css/OurRooms.css";
+import "../css/OurRooms.css";
 function Rooms() {
   const rooms = [
     {
