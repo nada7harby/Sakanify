@@ -5,8 +5,8 @@
   background-color: #f3f3f3;
   font-family: Inter;
   direction: rtl;
+  padding-top: 80px;
 }
-
 
 .Div {
   /* border-radius: 15px;
@@ -166,10 +166,11 @@
 }
 .Owner-book {
   position: absolute;
-  width: 100px;
+  width: 69px;
   height: 90px;
   top: 200px;
-   right: 0%;
+  right: 4%;
+  transform: rotate(180deg);
   z-index: 11;
   transition: 0.3s;
 }
@@ -219,7 +220,7 @@
   font-weight: 338;
   line-height: 23px;
   color: rgba(141, 141, 141, 1);
-  text-align:center;
+  text-align: center;
 }
 .Owner-model-personal-data {
   font-family: Inter;
