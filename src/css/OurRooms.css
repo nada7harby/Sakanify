@@ -164,7 +164,7 @@
   width: 100px;
   height: 90px;
   top: 200px;
-  /* right: 2px; */
+   right: 0%;
   z-index: 11;
   transition: 0.3s;
 }
