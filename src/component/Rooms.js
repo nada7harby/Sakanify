@@ -44,7 +44,7 @@ import Owner5 from "../img/Owner5.png";
 import Owner6 from "../img/Owner6.png";
 import Owner7 from "../img/Owner7.png";
 import Owner8 from "../img/Owner8.png";
-import "../css/OurRooms.css";
+import "../Css/OurRooms.css";
 function Rooms() {
   const rooms = [
     {
@@ -513,7 +513,7 @@ function Rooms() {
   };
   console.log(searchInitiated);
   return (
-    <>
+    <div className="Rooms">
       <Container className="py-4">
         <div className="Div  mx-auto  d-flex justify-content-center align-items-center">
           <div>
@@ -552,7 +552,7 @@ function Rooms() {
         {/* <Row>{searchInitiated ? RoomsAfterSearch() : DrawRooms(rooms)}</Row> */}
         <Row>{ RoomsAfterSearch() }</Row>
       </Container>
-    </>
+    </div>
   );
 }
 export default Rooms;
