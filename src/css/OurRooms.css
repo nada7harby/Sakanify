@@ -1,6 +1,11 @@
 /*  ==============================Our Rooms=========================================  */
 
 /*  ============================== Search Bar =========================================  */
+.Rooms {
+  background-color: #f3f3f3;
+  font-family: Inter;
+  direction: rtl;
+}
 
 .Div {
   /* border-radius: 15px;
