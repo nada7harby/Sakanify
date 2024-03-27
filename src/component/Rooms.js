@@ -433,7 +433,7 @@ function Rooms() {
                       <h3 className="mt-3 font-Weigth">
                         {room.owner.ownerName}
                       </h3>
-                      <p className="font-Weigth">
+                      <p className="Font-Color">
                         <img
                           src={HostIcon}
                           className="host-icon"
