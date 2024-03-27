@@ -15,12 +15,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import Alert from 'react-bootstrap/Alert';
 
 //Rooms images
-import Room1 from "../img/Room1.jpg";
-import Room2 from "../img/Room2.png";
-import Room3 from "../img/Room3.png";
-import Room4 from "../img/Room4.png";
-import Room5 from "../img/Room5.png";
-import Room6 from "../img/Room6.png";
+import Room1 from "../img/room1.png";
+import Room2 from "../img/room2.png";
+import Room3 from "../img/room3.png";
+import Room4 from "../img/room4.png";
+import Room5 from "../img/room5.png";
+import Room6 from "../img/room6.png";
 import Room7 from "../img/Room7.png";
 import Room8 from "../img/Room8.png";
 import Room9 from "../img/Room9.jpeg";
@@ -34,7 +34,7 @@ import Room15 from "../img/Room15.png";
 //Elements images
 import starImg from "../img/Full-star.png";
 import HalfStar from "../img/Half-star.png";
-import BookImg from "../img/Book.png";
+import BookImg from "../img/book.png";
 import SearchIcon from "../img/Search.png";
 import HostIcon from "../img/host-icon.png";
 
@@ -517,8 +517,10 @@ function Rooms() {
   };
   console.log(searchInitiated);
   return (
+    <>
+    <Nav/>
     <div className="Rooms">
-     <Nav></Nav>
+     
       <Container className="py-4">
         <div className="Div  mx-auto  d-flex justify-content-center align-items-center">
           <div>
@@ -557,8 +559,10 @@ function Rooms() {
         {/* <Row>{searchInitiated ? RoomsAfterSearch() : DrawRooms(rooms)}</Row> */}
         <Row>{ RoomsAfterSearch() }</Row>
       </Container>
-                 <Footer></Footer>
+                
     </div>
+    <Footer></Footer>
+    </>
   );
 }
 export default Rooms;
