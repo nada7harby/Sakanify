@@ -4,7 +4,9 @@ import Home from "./component/Home";
 import Services from "./component/Services";
 import Contact from "./component/Contact";
 import Rooms from "./component/Rooms";
-// import Nav from "./component/Nav";
+import Login from "./component/Register.js";
+import LoginOwner from "./component/RegisterOwner.js";
+import LoginForAll from "./component/Login.js"
 function App() {
   return (
     <div className="App">
@@ -14,6 +16,9 @@ function App() {
           <Route index path="/Services" Component={Services} />
           <Route index path="/Contact" Component={Contact} />
           <Route index path="/Rooms" Component={Rooms} />
+          <Route index path="/register" Component={Login} />
+          <Route index path="/registerOwner" Component={LoginOwner} />
+          <Route index path="/login" Component={LoginForAll} />
         </Routes>
       </Router>
     </div>
