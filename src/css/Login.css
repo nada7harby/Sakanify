@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top:70px;
+  padding-top: 70px;
 }
 
 .login .logo {
@@ -78,6 +78,15 @@
   font-weight: 700;
   color: #333;
 }
+.password {
+  position: relative;
+}
+.password i {
+  position: absolute;
+  color: #1a284e;
+  left: 13%;
+  top: 14%;
+}
 .form-v6-content .form-detail input[type="radio"] {
   appearance: auto;
   accent-color: #ddb20c;
@@ -93,7 +102,7 @@
 .radio div {
   display: flex;
 }
-.form-v6-content .form-detail .form-row input{
+.form-v6-content .form-detail .form-row input {
   background-color: transparent;
 }
 .form-v6-content .form-detail .form-row input.register {
@@ -146,13 +155,13 @@ input:-moz-placeholder {
   font-size: 16px;
 }
 
-.pass {
+/* .pass {
   background-image: url(../img/eye.png);
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
-}
-a{
+} */
+a {
   text-decoration: none;
 }
 .content-form {
@@ -180,7 +189,6 @@ a{
   width: 37px;
 }
 .users div.user {
-
   border-bottom: 4px solid #ddb20c;
   width: 30%;
   position: relative;
@@ -256,7 +264,6 @@ a{
 @media screen and (max-width: 767px) {
   .logo_users .users {
     display: block;
-   
   }
   .login_word {
     display: block;
@@ -267,9 +274,9 @@ a{
   .users div {
     padding: 3px 5px;
   }
-.login{
-  padding: 80px 0 0 0 ;
-}
+  .login {
+    padding: 80px 0 0 0;
+  }
 
   .form-v6-content {
     margin: 0;
@@ -316,7 +323,7 @@ a{
     background-color: transparent;
     color: #fff;
   }
-  .form-v6-content .form-detail .form-row input.register{
+  .form-v6-content .form-detail .form-row input.register {
     background-color: #ddb20c;
   }
   .form-v6-content .form-detail .form-row input::placeholder {
@@ -325,10 +332,9 @@ a{
   .form-left {
     display: none;
   }
-  input.register{
+  input.register {
     background: #ddb20c;
   }
-  
 }
 
 @media screen and (max-width: 575px) {
