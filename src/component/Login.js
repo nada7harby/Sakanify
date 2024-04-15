@@ -86,7 +86,7 @@ function LoginForAll() {
                       id="your-email"
                       className="input-text "
                       placeholder="رقم التليفون / البريد الالكتروني"
-                      pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+                     
                     />
                   </div>
                   <div className=" form-row   col-6 password" style={{ width: "100%" }}>
