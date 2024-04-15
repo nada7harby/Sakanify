@@ -55,9 +55,9 @@ function BasicExample() {
           </div>
 
           <ul className="dropdown-menu">
-            <li><Link className="dropdown-item" to="/Register">تسجيل الدخول</Link></li>
+            <li><Link className="dropdown-item" to="/login">تسجيل الدخول</Link></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><Link className="dropdown-item" to="/Login" >انشاء حساب جديد</Link></li>
+            <li><Link className="dropdown-item" to="/register" >انشاء حساب جديد</Link></li>
           </ul>
         </div>
       </div>
