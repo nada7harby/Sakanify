@@ -136,16 +136,17 @@ function Login() {
                       required
                     />
                   </div>
-                  <div className=" form-row   col-6">
+                  <div className=" form-row   col-6 password" >
                     <input
-                      type={showPassword ? "password" : "text"}
+                      type={showPassword ? "text" : "password"}
                       name="password"
                       id="password"
                       className="input-text pass"
                       placeholder="Password"
                       required
-                      onClick={togglePasswordVisibility}
+                      
                     />
+                    <i class="fa-solid fa-eye" onClick={togglePasswordVisibility}></i>
                   </div>
 
                   <div className=" form-row  radio col-6">
