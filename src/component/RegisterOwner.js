@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import React, { useState, useEffect } from "react";
 import loginunder from "../img/logounder.png";
 import loginunder2 from "../img/logo2.png";
+import Plogin from "../img/BGlogin.jpeg";
 import owner from "../img/owner-image.png";
 import user from "../img/User-owner.png";
 import twiter from "../img/twitter.png";
@@ -10,12 +11,8 @@ import insta from "../img/inst.png";
 import face from "../img/face.png";
 import gmail from "../img/gmail.png";
 import { Link } from "react-router-dom";
-var logo = document.getElementById("logo");
-// if (window.innerWidth > 200) {
-//   logo.src = { loginunder };
-// }
 
-function Login() {
+function LoginOwner() {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -59,13 +56,19 @@ function Login() {
 
                   <div className="users">
                     <Link to="/register">
-                      <div className="user">
+                      <div className="user" style={{ border: "none" }}>
                         <img src={user} />
                         المستخدم{" "}
                       </div>
                     </Link>
                     <Link to="/registerOwner">
-                      <div className="owner">
+                      <div
+                        className="owner"
+                        style={{
+                          borderBottom: "4px solid #ddb20c",
+                          width: "30%",
+                        }}
+                      >
                         {" "}
                         <img src={owner} />
                         صاحب العقار
@@ -75,7 +78,7 @@ function Login() {
                 </div>
                 <h1 className="login_word"> تسجيل</h1>
                 <div className="row content-form">
-                  <div className=" form-row  col-6 ">
+                  <div className=" form-row  col-6 " style={{ width: "100%" }}>
                     <input
                       type="text"
                       name="full-name"
@@ -85,58 +88,17 @@ function Login() {
                       required
                     />
                   </div>
-                  <div className=" form-row  col-6 ">
-                    <input
-                      type="text"
-                      name="full-name"
-                      id="full-name"
-                      className="input-text user"
-                      placeholder="رقم البطاقة"
-                      required
-                    />
-                  </div>
-                  <div className=" form-row  col-6 ">
-                    <input
-                      type="text"
-                      name="number"
-                      id="full-name"
-                      className="input-text user"
-                      placeholder="رقم التليفون"
-                      required
-                    />
-                  </div>
-                  <div className=" form-row  col-6 ">
-                    <input
-                      type="text"
-                      name="collage"
-                      id="full-name"
-                      className="input-text user"
-                      placeholder="الكلية"
-                      required
-                    />
-                  </div>
-                  <div className=" form-row  col-6">
+                  <div className=" form-row  col-6" style={{ width: "100%" }}>
                     <input
                       type="text"
                       name="your-email"
                       id="your-email"
                       className="input-text "
                       placeholder="البريد الالكتروني"
-                      required
                       pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
                     />
                   </div>
-                  <div className=" form-row  col-6 ">
-                    <input
-                      type="text"
-                      name="full-name"
-                      id="full-name"
-                      className="input-text user"
-                      placeholder="الفرقة"
-                      required
-                    />
-                  </div>
-                  <div className=" form-row   col-6">
+                  <div className=" form-row   col-6" style={{ width: "100%" }}>
                     <input
                       type={showPassword ? "password" : "text"}
                       name="password"
@@ -147,30 +109,17 @@ function Login() {
                       onClick={togglePasswordVisibility}
                     />
                   </div>
-
-                  <div className=" form-row  radio col-6">
-                    <div>
-                      <input
-                        type="radio"
-                        name="type"
-                        id="for-girl"
-                        className="input-text "
-                        value="ذكر"
-                        required
-                      />
-                      <label id="for-boy">انثي</label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        name="type"
-                        id="for-boy"
-                        className="input-text "
-                        required
-                      />
-                      <label id="for-boy">ذكر</label>
-                    </div>
+                  <div className=" form-row  col-6 " style={{ width: "100%" }}>
+                    <input
+                      type="text"
+                      name="number"
+                      id="full-name"
+                      className="input-text user"
+                      placeholder="رقم الهاتف"
+                      required
+                    />
                   </div>
+
                   <div className=" form-row  col-6-last">
                     <input
                       type="submit"
@@ -191,13 +140,16 @@ function Login() {
             <div className="form-left col-lg-6 form-right">
               <div className="users">
                 <Link to="/register">
-                  <div className="user">
+                  <div className="user" style={{ border: "none" }}>
                     <img src={user} />
                     المستخدم{" "}
                   </div>
                 </Link>
                 <Link to="/registerOwner">
-                  <div className="owner">
+                  <div
+                    className="owner"
+                    style={{ borderBottom: "4px solid #ddb20c", width: "30%" }}
+                  >
                     {" "}
                     <img src={owner} />
                     صاحب العقار
@@ -221,4 +173,4 @@ function Login() {
     </>
   );
 }
-export default Login;
+export default LoginOwner;
