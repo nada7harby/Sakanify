@@ -98,17 +98,22 @@ function LoginOwner() {
                       pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
                     />
                   </div>
-                  <div className=" form-row   col-6 password" style={{ width: "100%" }}>
+                  <div
+                    className=" form-row   col-6 password"
+                    style={{ width: "100%" }}
+                  >
                     <input
                       type={showPassword ? "text" : "password"}
                       name="password"
                       id="password"
                       className="input-text pass"
-                      placeholder="Password"
+                      placeholder="كلمة السر"
                       required
-                      
                     />
-                    <i class="fa-solid fa-eye" onClick={togglePasswordVisibility}></i>
+                    <i
+                      class="fa-solid fa-eye"
+                      onClick={togglePasswordVisibility}
+                    ></i>
                   </div>
                   <div className=" form-row  col-6 " style={{ width: "100%" }}>
                     <input

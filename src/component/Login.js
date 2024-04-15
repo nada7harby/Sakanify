@@ -86,7 +86,7 @@ function LoginForAll() {
                       id="your-email"
                       className="input-text "
                       placeholder="رقم التليفون / البريد الالكتروني"
-                     
+                      pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
                     />
                   </div>
                   <div className=" form-row   col-6 password" style={{ width: "100%" }}>
@@ -95,7 +95,7 @@ function LoginForAll() {
                       name="password"
                       id="password"
                       className="input-text pass"
-                      placeholder="Password"
+                      placeholder="كلمة السر"
                       required
                       
                     />

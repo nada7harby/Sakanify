@@ -137,12 +137,12 @@ function Login() {
                     />
                   </div>
                   <div className=" form-row   col-6 password" >
-                    <input
+                  <input
                       type={showPassword ? "text" : "password"}
                       name="password"
                       id="password"
                       className="input-text pass"
-                      placeholder="Password"
+                      placeholder="كلمة السر"
                       required
                       
                     />
