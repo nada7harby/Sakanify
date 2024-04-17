@@ -8,7 +8,7 @@ import Rooms from "./component/Rooms";
 import Login from "./component/Register.js";
 import LoginOwner from "./component/RegisterOwner.js";
 import LoginForAll from "./component/Login.js";
-import { Triangle, Vortex, RotatingTriangles } from "react-loader-spinner";
+import { Triangle, Vortex, ThreeDots } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
 
 function App() {
@@ -25,20 +25,19 @@ function App() {
         <div className="row justify-content-center align-items-center load p-5">
           <div className="col-lg-5">
             <img src={logo} alt="no" /> <br></br>
-            <Vortex
+            <ThreeDots
               visible={true}
-              height="120"
-              width="120"
-              ariaLabel="vortex-loading"
+              height="80"
+              width="80"
+              color="#1a284e"
+              radius="9"
+              ariaLabel="three-dots-loading"
               wrapperStyle={{}}
-              wrapperClass="vortex-wrapper"
-              colors={["#ddb20c", "#1a284e", "#ddb20c", "#1a284e","#ddb20c", "#1a284e",]}
+              wrapperClass=""
             />
-            
           </div>
         </div>
       ) : (
-        
         <div className="App">
           <Router>
             <Routes>
