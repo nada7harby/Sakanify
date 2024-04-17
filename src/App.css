@@ -6,6 +6,19 @@
   height: 40vmin;
   pointer-events: none;
 }
+.load{
+  height: 98vh;
+}
+.load div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.load img{
+width:50%;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
