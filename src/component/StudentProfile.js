@@ -1,6 +1,6 @@
 import '../css/StudentProfile.css'
 
-import userImage from './img/Ellipse 40.png';
+import userImage from '../img/Ellipse 40.png';
 
 
 
