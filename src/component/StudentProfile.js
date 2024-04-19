@@ -59,6 +59,7 @@ const [showPassword, setShowPassword] = useState(false);
                                                               id="password"
                                                               className="input-text pass"
                                                               placeholder="كلمة السر"
+                                                              value="admin.410"
                                                               required
                                                               
                                                             />
