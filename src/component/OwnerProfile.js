@@ -1,5 +1,5 @@
-import "./OwnerProfile.css";
-import userImage from "./imgs/Ellipse 41.png";
+import "../css/OwnerProfile.css";
+import userImage from "./img/Ellipse 41.png";
 
 function OwnerProfile() {
   return (
