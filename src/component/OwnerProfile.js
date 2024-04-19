@@ -8,7 +8,7 @@ import userImage from "../img/Ellipse 41.png";
 function OwnerProfile() {
   return (
     <>
-    <Nav></Nav>
+      <Nav></Nav>
       <div className="ownerContainer">
         <div className="row ownerRow">
           
@@ -59,7 +59,7 @@ function OwnerProfile() {
 
         </div>
       </div>
-    <Footer></Footer>
+     <Footer></Footer>
     </>
   );
 }
