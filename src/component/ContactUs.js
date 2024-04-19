@@ -6,7 +6,7 @@ function ContactUs()
 
         return (
         <>
-                <div className="container">
+                <div className="contactUsContainer">
                         <div className="contactUsRow row">
                                 <div className="form">
                                         <form> 
