@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Nav from "./Nav"
+import Footer from "./Footer";
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -45,6 +47,8 @@ function RoomDetails() {
     setHeartColor(!HeartColor);
   };
   return (
+    <>
+    <Nav></Nav>
     <div className="Room-Details d-flex justify-content-center">
       <Container >
         <Row>
@@ -398,7 +402,7 @@ function RoomDetails() {
                 <img src={LeftFlower} alt="Left Flower" className="Flower " />
               </div>
               <div className="text-center mb-5">
-                <p className="text-center">
+                <p>
                   {" "}
                   أحد أكثر البيوت التي أحبها الضيوف على Sakanify <br /> بناءً
                   على التقييمات والمراجعات والموثوقية
@@ -438,6 +442,8 @@ function RoomDetails() {
         </Row>
       </Container>
     </div>
+                    <Footer></Footer>
+                    </>
   );
 }
 export default RoomDetails;
