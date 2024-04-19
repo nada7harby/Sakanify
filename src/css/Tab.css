@@ -75,6 +75,8 @@
   bottom: 6%;
   border-radius: 50%;
 }
+.card{
+  background-color: #f3f3f3;}
 .card .active {
   text-decoration: none !important;
 }
