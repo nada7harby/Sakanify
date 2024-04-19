@@ -398,7 +398,7 @@ function RoomDetails() {
                 <img src={LeftFlower} alt="Left Flower" className="Flower " />
               </div>
               <div className="text-center mb-5">
-                <p>
+                <p className="text-center">
                   {" "}
                   أحد أكثر البيوت التي أحبها الضيوف على Sakanify <br /> بناءً
                   على التقييمات والمراجعات والموثوقية
