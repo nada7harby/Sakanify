@@ -1,6 +1,7 @@
 import '../css/StudentProfile.css'
 import Nav from "./Nav"
 import Footer from "./Footer";
+import React, { useState, useEffect } from "react";
 import userImage from '../img/Ellipse 40.png';
 
 
