@@ -8,6 +8,9 @@
   font-weight: 300;
   font-size: 25px;
 }
+.props{
+  text-align:center;
+}
 /* Custom CSS */
 @media (max-width: 575px) {
   .Div-Info-Details,
