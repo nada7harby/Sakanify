@@ -7,6 +7,7 @@ import Contact from "./component/Contact";
 import Rooms from "./component/Rooms";
 import Login from "./component/Register.js";
 import LoginOwner from "./component/RegisterOwner.js";
+import RoomDetails from "./component/RoomDetails.js";
 import LoginForAll from "./component/Login.js";
 import { Triangle, Vortex, ThreeDots } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
@@ -48,6 +49,7 @@ function App() {
               <Route index path="/register" Component={Login} />
               <Route index path="/registerOwner" Component={LoginOwner} />
               <Route index path="/login" Component={LoginForAll} />
+         <Route index path="/RoomDetails" Component={RoomDetails} />
             </Routes>
           </Router>
         </div>
