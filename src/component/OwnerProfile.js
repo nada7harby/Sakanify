@@ -6,6 +6,11 @@ import Footer from "./Footer";
 import userImage from "../img/Ellipse 41.png";
 
 function OwnerProfile() {
+   const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <>
       <Nav></Nav>
@@ -46,8 +51,15 @@ function OwnerProfile() {
             <div className="dataForOwner">
               <i class="fa-solid fa-key"></i>
               <span>
-                <i class="fa-solid fa-circle"></i>
-                <i class="fa-solid fa-eye-slash"></i>
+                <input
+                      type={showPassword ? "text" : "password"}
+                      name="password"
+                      id="password"
+                      className="input-text pass"
+                      placeholder="كلمة السر"
+                      required
+                    />
+                <i class="fa-solid fa-eye-slash"  onClick={togglePasswordVisibility}></i>
               </span>
             </div>
 
