@@ -1,9 +1,14 @@
 import "../css/OwnerProfile.css";
+import Nav from "./Nav";
+import React, { useState, useEffect } from "react";
+import Footer from "./Footer";
+
 import userImage from "../img/Ellipse 41.png";
 
 function OwnerProfile() {
   return (
     <>
+    <Nav></Nav>
       <div className="ownerContainer">
         <div className="row ownerRow">
           
@@ -54,6 +59,7 @@ function OwnerProfile() {
 
         </div>
       </div>
+    <Footer></Footer>
     </>
   );
 }
