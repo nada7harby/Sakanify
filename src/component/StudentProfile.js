@@ -53,7 +53,7 @@ const [showPassword, setShowPassword] = useState(false);
                                         <div className="studentData">
                                                 <i class="fa-solid fa-key"></i>
                                                 <span> 
-                                                        // <i class="fa-solid fa-circle"></i>
+                                                        
                                                          <input
                                                               type={showPassword ? "text" : "password"}
                                                               name="password"
@@ -64,7 +64,7 @@ const [showPassword, setShowPassword] = useState(false);
                                                               required
                                                               
                                                             />
-                                                        <i class="fa-solid fa-eye-slash"></i>
+                                                        <i class="fa-solid fa-eye-slash " onClick={togglePasswordVisibility}></i>
                                                 </span>
                                         </div>
                                 </div>
