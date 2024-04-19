@@ -6,7 +6,11 @@ import userImage from '../img/Ellipse 40.png';
 
 
 function StudentProfile() {
+const [showPassword, setShowPassword] = useState(false);
 
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
         return (<>
                 <Nav></Nav>
                 <div className="studentContainer">
@@ -48,7 +52,16 @@ function StudentProfile() {
                                         <div className="studentData">
                                                 <i class="fa-solid fa-key"></i>
                                                 <span> 
-                                                        <i class="fa-solid fa-circle"></i>
+                                                        // <i class="fa-solid fa-circle"></i>
+                                                         <input
+                                                              type={showPassword ? "text" : "password"}
+                                                              name="password"
+                                                              id="password"
+                                                              className="input-text pass"
+                                                              placeholder="كلمة السر"
+                                                              required
+                                                              
+                                                            />
                                                         <i class="fa-solid fa-eye-slash"></i>
                                                 </span>
                                         </div>
