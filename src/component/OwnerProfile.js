@@ -51,15 +51,17 @@ function OwnerProfile() {
             <div className="dataForOwner">
               <i class="fa-solid fa-key"></i>
               <span>
-                <input
-                      type={showPassword ? "text" : "password"}
-                      name="password"
-                      id="password"
-                      className="input-text pass"
-                      placeholder="كلمة السر"
-                      required
-                    />
-                <i class="fa-solid fa-eye-slash"  onClick={togglePasswordVisibility}></i>
+               <div className="password>
+                  <input
+                                  type={showPassword ? "text" : "password"}
+                                  name="password"
+                                  id="password"
+                                  className="input-text pass"
+                                  placeholder="كلمة السر"
+                                  required
+                                />
+                            <i class="fa-solid fa-eye-slash"  onClick={togglePasswordVisibility}></i>
+                 </div>
               </span>
             </div>
 
