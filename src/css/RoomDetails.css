@@ -1,0 +1,173 @@
+.Room-Details {
+  background-color: #f3f3f3;
+  font-family: Inter;
+  direction: rtl;
+  padding-top: 80px;
+}
+.Div-Info-Details p {
+  font-weight: 300;
+  font-size: 25px;
+}
+/* Custom CSS */
+@media (max-width: 575px) {
+  .Div-Info-Details,
+  .Room-Img-md-View img,
+  .RoomDetailsPrice,
+  .contactOwner {
+    display: none;
+  }
+  .Rooms-details-Swiper {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  .Div-Info-Details {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Rooms-details-Swiper,
+  .Responsive-price {
+    display: none;
+  }
+  .Room-Details-Imgs1 img {
+    height: 300px;
+    width: 102%;
+  }
+  .Room-Details-Imgs2 img {
+    width: 111%;
+    height: 145px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 321px;
+  height: 260px;
+  /* border-radius: 15px; */
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+}
+.Swiper-Img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 15px; */
+}
+.RoomDescription {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 32.68px;
+  color: rgba(0, 0, 0, 1);
+}
+.Star-imggg {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 6px;
+  margin-bottom: 3px;
+}
+.NumOfRates {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 32.68px;
+  color: rgba(0, 0, 0, 1);
+}
+.Host-Details {
+  margin: 20px 0;
+  padding: 30px 0;
+  border-top: 0.75px solid rgba(141, 141, 141, 1);
+  border-bottom: 0.75px solid rgba(141, 141, 141, 1);
+}
+.HostImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.RoomDetailsPrice {
+  width: 400px;
+  height: 380px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(141, 141, 141, 1);
+  background: rgba(255, 255, 255, 1);
+}
+.contactOwner {
+  width: 350px;
+  height: 60px;
+  border-radius: 10px;
+  background: rgba(26, 40, 78, 1);
+  color: white;
+  border: 0;
+  transition: 0.2s;
+  margin-bottom: 18px;
+}
+.Booking-button {
+  width: 100px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(26, 40, 78, 1);
+  color: white;
+  border: 0;
+  transition: 0.2s;
+  margin-bottom: 18px;
+}
+.contactOwner:hover,
+.Booking-button:hover {
+  background-color: black;
+}
+.RoomFeatures img {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+.RoonFeatures span {
+  font-weight: 600;
+}
+.RoomDetailsRate {
+  height: 230px;
+  line-height: 25px;
+  color: rgba(26, 40, 78, 1);
+}
+.Flower {
+  width: 90px;
+  height: 80px;
+  transform: rotate(30deg);
+}
+.flower2 {
+  transform: rotate(-29deg);
+}
+.RoomDetailsRate2 {
+  font-family: Inter;
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 80px;
+}
+.Rate-details {
+  width: 34px;
+  height: 34px;
+  display: block;
+  margin: 0 auto;
+}
+/* .DetailsRate{
+  padding-right: 5px;
+  border-right: 0.5px solid rgba(141, 141, 141, 1)
+} */
