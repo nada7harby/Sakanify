@@ -1,0 +1,90 @@
+body {
+        background-color: #F3F3F3;
+}
+
+.ownerContainer {
+        padding: 0 65px;
+        margin: 165px auto;
+}
+.ownerRow{
+        /* background-color: red; */
+        direction: rtl;
+        display: flex; 
+        justify-content: space-between;
+        /* padding: 150px; */
+        /* margin: 165px auto; */
+        border-radius: 30px;
+}
+
+
+
+.ownnerCol h2 {
+        margin: auto;
+}
+
+.dataForOwner {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        margin: 20px ;
+}
+
+.dataForOwner i {
+        font-size: 30px;
+        padding: 1px;
+        margin-left: 5%;
+}
+.dataForOwner img {
+        margin-left: 20px;
+
+}
+.dataForOwner span {
+        font-size: 25px;
+}
+
+.ownerData {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FFF;
+        border: 1px solid #000;
+        border-radius: 15px;
+        padding: 20px;
+        width: 100%;
+        height: fit-content;
+}
+
+.ownerImg {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+}
+
+.ownerData h2 {
+        color: #DDB20C;
+        font-size: 25px;
+}
+.ownerData p {
+        font-size: 20px;
+}
+
+.toPost {
+        background-color: #DDB20C;
+        color: #1A284E;
+        font-size: 30px;
+        text-align: center;
+        width: fit-content ;
+        border-radius: 15px;
+        height: fit-content;
+        padding: 20px;
+        margin: 10px;
+}
+
+
+@media (max-width:991px)
+{
+        .emptyDiv {
+                display: none;
+        }
+}
