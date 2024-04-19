@@ -17,8 +17,9 @@ body {
         display: flex;
         justify-content: space-between;
         /* padding: 150px; */
-        margin: 165px auto;
+/*         margin: 165px auto; */
         border-radius: 30px;
+        padding:120px 0px ;
 }
 
 
