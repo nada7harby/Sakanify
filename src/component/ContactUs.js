@@ -1,5 +1,5 @@
 import '../css/ContactUs.css'
-import image from './img/bluePhone.png';
+import image from '../img/bluePhone.png';
 
 function ContactUs() 
 {
