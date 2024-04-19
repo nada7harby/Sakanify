@@ -1,11 +1,14 @@
 import '../css/ContactUs.css'
 import image from '../img/bluePhone.png';
+import Nav from "./Nav"
+import Footer from "./Footer";
 
 function ContactUs() 
 {
 
         return (
         <>
+                <Nav></Nav>
                 <div className="contactUsContainer">
                         <div className="contactUsRow row">
                                 <div className="form">
@@ -35,6 +38,7 @@ function ContactUs()
                                 </div>
                         </div>
                 </div>
+                <Footer></Footer>
         </>
         );
 }
