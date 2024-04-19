@@ -1,5 +1,6 @@
 import '../css/StudentProfile.css'
-
+import Nav from "./Nav"
+import Footer from "./Footer";
 import userImage from '../img/Ellipse 40.png';
 
 
@@ -7,6 +8,7 @@ import userImage from '../img/Ellipse 40.png';
 function StudentProfile() {
 
         return (<>
+                <Nav></Nav>
                 <div className="studentContainer">
                         <div className="row studentRow">
                                 
@@ -86,6 +88,7 @@ function StudentProfile() {
 
 
                 </div>
+                <Footer></Footer>
         </>);
 }
 
