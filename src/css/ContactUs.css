@@ -3,13 +3,14 @@ body {
         background-color: #F3F3F3;
 }
 .contactUsContainer {
-        padding: 0 65px;
-        margin: 165px auto;
+/*         padding: 0 65px; */
+/*         margin: 165px auto; */
+        padding:120px 65px;
 }
 
 .contactUsRow{
         position: relative;
-        margin: 165px auto;
+/*         margin: 165px auto; */
         padding: 65px;
         border-radius: 30px;
         background-color: #FFF;
