@@ -50,7 +50,7 @@ function OwnerProfile() {
 
             <div className="dataForOwner">
               <i class="fa-solid fa-key"></i>
-              <span>
+             
                <div className="password>
                   <input
                                   type={showPassword ? "text" : "password"}
@@ -58,11 +58,12 @@ function OwnerProfile() {
                                   id="password"
                                   className="input-text pass"
                                   placeholder="كلمة السر"
+                                 value="admin.99"
                                   required
                                 />
                             <i class="fa-solid fa-eye-slash"  onClick={togglePasswordVisibility}></i>
                  </div>
-              </span>
+             
             </div>
 
             <button className="toPost"> ارفع مسكنك علي Sakanify </button>
