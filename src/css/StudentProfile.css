@@ -86,7 +86,7 @@ body {
         font-size: 20px;
 }
 
-studentData .password input{
+.studentData .password input{
  width: 92%;
   padding: 0px 15px 10px 15px;
   border: 2px solid transparent;
@@ -107,10 +107,10 @@ studentData .password input{
 background-color:#f3f3f3;
 border:none;
 }
-studentData .password {
+.studentData .password {
   position: relative;
 }
-studentData .password i.eye {
+.studentData .password i.eye {
   position: absolute;
   color: #1a284e;
   left: -1%;
