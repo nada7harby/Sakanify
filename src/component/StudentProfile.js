@@ -62,7 +62,7 @@ const [showPassword, setShowPassword] = useState(false);
                                                                            value="admin.99"
                                                                             required
                                                                           />
-                                                                      <i class="fa-solid fa-eye-slash"  onClick={togglePasswordVisibility}></i>
+                                                                      <i class="fa-solid fa-eye-slash eye"  onClick={togglePasswordVisibility}></i>
                                                      </div>
                                         </div>
                                 </div>
