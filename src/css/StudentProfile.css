@@ -113,8 +113,8 @@ border:none;
 .studentData .password i.eye {
   position: absolute;
   color: #1a284e;
-  left: -1%;
-  font-size:17px;     
+  left: -1% !important;
+  font-size:17px !important;     
   top: 14%;
 }
 
