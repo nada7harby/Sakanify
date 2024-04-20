@@ -54,7 +54,7 @@ body {
         width: 100%;
         height: fit-content;
 }
-.ownerData .password input{
+.password input{
  width: 92%;
   padding: 0px 15px 10px 15px;
   border: 2px solid transparent;
@@ -81,7 +81,8 @@ border:none;
 .password i.eye {
   position: absolute;
   color: #1a284e;
-  left: 13%;
+  left: -1%;
+  font-size:17px;     
   top: 14%;
 }
 
