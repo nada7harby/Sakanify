@@ -52,20 +52,18 @@ const [showPassword, setShowPassword] = useState(false);
 
                                         <div className="studentData">
                                                 <i class="fa-solid fa-key"></i>
-                                                <span> 
-                                                        
-                                                         <input
-                                                              type={showPassword ? "text" : "password"}
-                                                              name="password"
-                                                              id="password"
-                                                              className="input-text pass"
-                                                              placeholder="كلمة السر"
-                                                              value="admin.410"
-                                                              required
-                                                              
-                                                            />
-                                                        <i class="fa-solid fa-eye-slash " onClick={togglePasswordVisibility}></i>
-                                                </span>
+                                                 <div className="password">
+                                                            <input
+                                                                            type={showPassword ? "text" : "password"}
+                                                                            name="password"
+                                                                            id="password"
+                                                                            className="input-text pass"
+                                                                            placeholder="كلمة السر"
+                                                                           value="admin.99"
+                                                                            required
+                                                                          />
+                                                                      <i class="fa-solid fa-eye-slash"  onClick={togglePasswordVisibility}></i>
+                                                     </div>
                                         </div>
                                 </div>
 
