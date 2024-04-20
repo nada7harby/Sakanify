@@ -51,7 +51,7 @@ function OwnerProfile() {
             <div className="dataForOwner">
               <i class="fa-solid fa-key"></i>
              
-               <div className="password>
+               <div className="password">
                   <input
                                   type={showPassword ? "text" : "password"}
                                   name="password"
