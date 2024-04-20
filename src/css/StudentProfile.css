@@ -86,6 +86,37 @@ body {
         font-size: 20px;
 }
 
+.password input{
+ width: 92%;
+  padding: 0px 15px 10px 15px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #d3d3d3;
+  appearance: unset;
+  -moz-appearance: unset;
+  -webkit-appearance: unset;
+  -o-appearance: unset;
+  -ms-appearance: unset;
+  -moz-outline: none;
+  -webkit-outline: none;
+  -o-outline: none;
+  -ms-outline: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+background-color:#f3f3f3;
+border:none;
+}
+.password {
+  position: relative;
+}
+.password i.eye {
+  position: absolute;
+  color: #1a284e;
+  left: -1%;
+  font-size:17px;     
+  top: 14%;
+}
 
 @media (max-width:991px)
 {
