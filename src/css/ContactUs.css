@@ -45,14 +45,16 @@ body {
         width: 100%;
         height: 60px;
         border: none;
-        background-color: #1A284E;
-        opacity: 10%;
+        outline: none;
+        padding: 5px;
+        background-color: #19274d1a;
 }
 .contactUsContainer form textarea {
         width: 100%;
         border: none;
-        background-color: #1A284E;
-        opacity: 10%;
+        outline: none;
+        padding: 5px;
+        background-color: #19274d1a;
         resize: none;
 }
 .contactUsContainer form button {
