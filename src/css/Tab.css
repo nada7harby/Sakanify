@@ -66,6 +66,21 @@
   width: 41%;
   height: 38%;
 }
+.swal2-popup{
+  background-color: #1a284e;
+  
+}
+.swal2-title {
+  color: #ffff;
+  background-color: #1a284e;
+}
+.swal2-popup button.swal2-confirm {
+  background-color: #ddb20c;
+  border: none
+}
+.swal2-popup button.swal2-confirm:focus{
+  border: none
+}
 .OwImg_book {
   position: absolute;
   width: 15%;
@@ -75,8 +90,6 @@
   bottom: 6%;
   border-radius: 50%;
 }
-.card{
-  background-color: #f3f3f3;}
 .card .active {
   text-decoration: none !important;
 }

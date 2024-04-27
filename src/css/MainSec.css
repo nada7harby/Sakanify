@@ -32,7 +32,7 @@
 .Main3 {
   border-top-left-radius: 110px;
 }
-.mainSec-content{
+.mainSec-content {
   padding-top: 55px;
 }
 .main_content {
@@ -99,7 +99,6 @@ p {
   }
   .mainSec-content {
     flex-direction: column-reverse;
-    
   }
 }
 

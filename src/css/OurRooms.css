@@ -168,7 +168,7 @@
   position: absolute;
     width: 100px;
     height: 90px;
-    top: 165px;
+    top: 200px;
     right: 0%;
     /* transform: rotate(180deg); */
     z-index: 11;
@@ -180,7 +180,7 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  top: 193px;
+  top: 227px;
   right: 28px;
 }
 .Owner-book:hover {
