@@ -132,6 +132,14 @@ body {
                 width: 500px;
         }
 }
+@media (max-width: 600px){
+        .contactUsContainer {      
+            padding: 120px 27px;
+}
+.contactUsRow {
+        padding: 10px 30px;
+}
+}
 
 @media (width: 1024px) {
         .contactUsRow .img {
