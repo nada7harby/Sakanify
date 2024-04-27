@@ -165,23 +165,22 @@
   /* color: rgba(255, 255, 255, 0.919); */
 }
 .Owner-book {
-  position: absolute;
+  height: 90px;
+    position: absolute;
+    right: -9px;
+    top: 170px;
+    transition: .3s;
     width: 100px;
-    height: 90px;
-    top: 200px;
-    right: 0%;
-    /* transform: rotate(180deg); */
     z-index: 11;
-    transition: 0.3s;
 }
 .Owner-Img {
-  position: absolute;
-  z-index: 12;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  top: 227px;
-  right: 28px;
+border-radius: 50%;
+    height: 35px;
+    position: absolute;
+    right: 19px;
+    top: 198px;
+    width: 35px;
+    z-index: 12;
 }
 .Owner-book:hover {
   /* .Owner-book:hover .Owner-Img{ */
