@@ -10,12 +10,26 @@ import insta from "../img/inst.png";
 import face from "../img/face.png";
 import gmail from "../img/gmail.png";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+
 var logo = document.getElementById("logo");
 // if (window.innerWidth > 200) {
 //   logo.src = { loginunder };
 // }
 
 function Login() {
+  const [password, setPassword] = useState("");
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    Swal.fire("Your Register in Done");
+
+    localStorage.setItem("password", password);
+  };
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -50,7 +64,12 @@ function Login() {
         <div className="container login">
           <div className="row justify-content-between form-v6-content">
             <div className="col-lg-6">
-              <form className="form-detail " action="#" method="post">
+              <form
+                className="form-detail "
+                action="#"
+                method="post"
+                onSubmit={handleSubmit}
+              >
                 <div className="logo_users">
                   {/* <img id="logo" src={loginunder} className="logo" alt="img" /> */}
                   {logoSrc && (
@@ -88,7 +107,7 @@ function Login() {
                   <div className=" form-row  col-6 ">
                     <input
                       type="text"
-                      name="full-name"
+                      name="Id"
                       id="full-name"
                       className="input-text user"
                       placeholder="رقم البطاقة"
@@ -136,17 +155,20 @@ function Login() {
                       required
                     />
                   </div>
-                  <div className=" form-row   col-6 password" >
-                  <input
+                  <div className=" form-row   col-6 password">
+                    <input
                       type={showPassword ? "text" : "password"}
                       name="password"
                       id="password"
                       className="input-text pass"
                       placeholder="كلمة السر"
                       required
-                      
+                      onChange={handlePasswordChange}
                     />
-                    <i class="fa-solid fa-eye" onClick={togglePasswordVisibility}></i>
+                    <i
+                      class="fa-solid fa-eye"
+                      onClick={togglePasswordVisibility}
+                    ></i>
                   </div>
 
                   <div className=" form-row  radio col-6">

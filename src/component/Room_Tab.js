@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Tab, Nav } from "react-bootstrap";
 import "../css/Tab.css";
+import Swal from "sweetalert2";
+
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import room1 from "../img/room1.png";
@@ -18,6 +20,7 @@ import oImg5 from "../img/ow5.png";
 import oImg6 from "../img/ow6.png";
 
 function Room_Tab() {
+  const numberCheck = localStorage.getItem("password");
   const [show, setShow] = useState(false);
   // const handleClose = () => setShow(false);
   // const handleShow = () => setShow(true);
@@ -132,20 +135,27 @@ function Room_Tab() {
 
   const [SelectedRooms, setSelectedRooms] = useState([]);
   const toggleRoom = (room) => {
-    const roomId = room.id;
-    const isRoomSelected = SelectedRooms.includes(roomId);
-    if (isRoomSelected) {
-      console.log("trueee");
-      setSelectedRooms(SelectedRooms.filter((id) => id !== roomId));
+    if (numberCheck != "") {
+      const roomId = room.id;
+      const isRoomSelected = SelectedRooms.includes(roomId);
+      if (isRoomSelected) {
+        console.log("trueee");
+        setSelectedRooms(SelectedRooms.filter((id) => id !== roomId));
+      } else {
+        console.log("falseeeee");
+        setSelectedRooms([...SelectedRooms, roomId]);
+      }
     } else {
-      console.log("falseeeee");
-      setSelectedRooms([...SelectedRooms, roomId]);
+      Swal.fire("You should login at first ");
     }
   };
   const [showModal, setShowModal] = useState(Array(arr.length).fill(false));
 
   const handleShow = (index) => {
     setShowModal((prev) => {
+      if (localStorage.getItem("password") === "") {
+        Swal.fire("You should login at first ");
+      }
       const updatedState = [...prev];
       updatedState[index] = true;
       return updatedState;
@@ -209,13 +219,25 @@ function Room_Tab() {
                       <span>
                         <i class="fa-solid fa-phone-volume"></i>{" "}
                       </span>
-                      <span>0123456789</span>
+                      {/* <span>0123456789</span> */}
+                      <span>
+                        {numberCheck === ""
+                          ? ele.owner.phoneNum.slice(0, 3) +
+                            "X".repeat(ele.owner.phoneNum.length - 3)
+                          : ele.owner.phoneNum}
+                      </span>
                     </div>
                     <div>
                       <span>
                         <i class="fa-regular fa-envelope"></i>
                       </span>
-                      <span>Ahmed@gmail.com</span>
+                      <span>
+                        {" "}
+                        {numberCheck === ""
+                          ? ele.owner.owEmail.slice(0, 3) +
+                            "X".repeat(ele.owner.owEmail.length - 3)
+                          : ele.owner.owEmail}
+                      </span>
                     </div>
                     <div>
                       <span>

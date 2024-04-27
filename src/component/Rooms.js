@@ -1,16 +1,22 @@
 import { Container, Card, Row, Col } from "react-bootstrap";
 // Import Swiper styles
 import "swiper/css";
-import Nav from "./Nav"
+import Nav from "./Nav";
 import Footer from "./Footer";
-
+import Swal from "sweetalert2";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import CloseButton from "react-bootstrap/CloseButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faStar ,faPhoneVolume,faEnvelope, faAward } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faStar,
+  faPhoneVolume,
+  faEnvelope,
+  faAward,
+} from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Alert from 'react-bootstrap/Alert';
 
@@ -49,6 +55,8 @@ import Owner7 from "../img/Owner7.png";
 import Owner8 from "../img/Owner8.png";
 import "../css/OurRooms.css";
 function Rooms() {
+  const numberCheck = localStorage.getItem("password");
+
   const rooms = [
     {
       id: 1,
@@ -67,9 +75,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 3.6,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "owner@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "owner@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -89,9 +98,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 4.8,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "owner@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "owner@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -111,9 +121,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 3.6,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "owner@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "owner@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -133,9 +144,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 5,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "owner@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "owner@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -155,9 +167,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 3.6,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "owner@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "owner@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -177,9 +190,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 5,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "owner@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "owner@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -199,9 +213,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 3.6,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "Ahmed@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "Ahmed@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -221,9 +236,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 4.2,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "Ahmed@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "Ahmed@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -243,9 +259,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 3.6,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "Ahmed@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "Ahmed@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -265,9 +282,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 3.6,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "Ahmed@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "Ahmed@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -287,9 +305,10 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 3.6,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "Ahmed@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "Ahmed@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
     {
@@ -309,29 +328,35 @@ function Rooms() {
         StudentsComments: 79,
         ownerRate: 3.6,
         ownerYears: 11,
-        phone : "0123456789",
-        ownerMail : "Ahmed@gmail.com",
-        ownerDescription : "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
+        phone: "0123456789",
+        ownerMail: "Ahmed@gmail.com",
+        ownerDescription:
+          "ما الذي يجعل مسكني مميزًا: طاقة جيدة وشعور وكأنك في بيتك",
       },
     },
   ];
   let source;
-  
+
   const [showModal, setShowModal] = useState(Array(rooms.length).fill(false));
   const [SelectedRooms, setSelectedRooms] = useState([]);
   const [PlaceSearch, setPlaceSearch] = useState("");
   const [PriceeSearch, setPriceSearch] = useState("");
   const [searchInitiated, setSearchInitiated] = useState(false);
   const toggleRoom = (room) => {
-    const roomId = room.id;
-    const isRoomSelected = SelectedRooms.includes(roomId);
+    if (numberCheck != "") {
+      const roomId = room.id;
+      const isRoomSelected = SelectedRooms.includes(roomId);
 
-    if (isRoomSelected) {
-      setSelectedRooms(SelectedRooms.filter((id) => id !== roomId));
-    } else {
-      setSelectedRooms([...SelectedRooms, roomId]);
+      if (isRoomSelected) {
+        setSelectedRooms(SelectedRooms.filter((id) => id !== roomId));
+      } else {
+        setSelectedRooms([...SelectedRooms, roomId]);
+      }
     }
-  };
+    else{
+      Swal.fire("You should login at first ");
+    }
+  }
   const handleShow = (index) => {
     setShowModal((prev) => {
       const updatedState = [...prev];
@@ -357,16 +382,14 @@ function Rooms() {
     return source;
   };
   let HostTitle;
-  const HostTilteFunc = (HostRate)=>{
-    if(HostRate > 4)
-    {
-      HostTitle='مضيف متميز';
-    }
-    else{
-      HostTitle='مضيف';
+  const HostTilteFunc = (HostRate) => {
+    if (HostRate > 4) {
+      HostTitle = "مضيف متميز";
+    } else {
+      HostTitle = "مضيف";
     }
     return HostTitle;
-  }
+  };
   // const handleSearch = () => {
   //   if (PlaceSearch || PriceeSearch) {
   //     setSearchInitiated(true);
@@ -418,15 +441,17 @@ function Rooms() {
               show={showModal[index]}
               onHide={() => handleClose(index)}
               centered
-              
             >
-              <Modal.Body  style={{ backgroundColor: "#f3f3f3" }} className="rounded-3 border-0">
+              <Modal.Body
+                style={{ backgroundColor: "#f3f3f3" }}
+                className="rounded-3 border-0"
+              >
                 <CloseButton
                   onClick={() => handleClose(index)}
                   className="mb-3"
                 />
                 <Container>
-                  <Row className="owner-model-div p-3 d-flex">
+                  <Row className="owner-model-div p-3 d-flex m-0">
                     <Col sm={6} className="text-center ">
                       <img
                         src={room.owner.ownerImg}
@@ -472,9 +497,27 @@ function Rooms() {
                   </Row>
                   <Row>
                     <Col sm={11} className="p-4 Owner-model-personal-data">
-                      <p><FontAwesomeIcon icon={faPhoneVolume} style={{marginLeft: "6px"}}/> {room.owner.phone}</p>
-                      <p><FontAwesomeIcon icon={faEnvelope}  style={{marginLeft: "6px"}}/> {room.owner.ownerMail}</p>
-                      <p><FontAwesomeIcon icon={faAward}  style={{marginLeft: "6px"}}/> {room.owner.ownerDescription}</p>
+                      <p>
+                        <FontAwesomeIcon
+                          icon={faPhoneVolume}
+                          style={{ marginLeft: "6px" }}
+                        />{" "}
+                        {room.owner.phone}
+                      </p>
+                      <p>
+                        <FontAwesomeIcon
+                          icon={faEnvelope}
+                          style={{ marginLeft: "6px" }}
+                        />{" "}
+                        {room.owner.ownerMail}
+                      </p>
+                      <p>
+                        <FontAwesomeIcon
+                          icon={faAward}
+                          style={{ marginLeft: "6px" }}
+                        />{" "}
+                        {room.owner.ownerDescription}
+                      </p>
                     </Col>
                   </Row>
                 </Container>
@@ -518,50 +561,48 @@ function Rooms() {
   console.log(searchInitiated);
   return (
     <>
-    <Nav/>
-    <div className="Rooms">
-     
-      <Container className="py-4">
-        <div className="Div  mx-auto  d-flex justify-content-center align-items-center">
-          <div>
-            <h4 className="text-center"> المكان</h4>
-            <input
-              type="text"
-              placeholder="البحث عن وجهات"
-              className="text-center form-control  border-0 mx-auto search-inp"
-              name="Place Search"
-              onChange={(e) => setPlaceSearch(e.target.value)}
-            />
+      <Nav />
+      <div className="Rooms">
+        <Container className="py-4">
+          <div className="Div  mx-auto  d-flex justify-content-center align-items-center">
+            <div>
+              <h4 className="text-center"> المكان</h4>
+              <input
+                type="text"
+                placeholder="البحث عن وجهات"
+                className="text-center form-control  border-0 mx-auto search-inp"
+                name="Place Search"
+                onChange={(e) => setPlaceSearch(e.target.value)}
+              />
+            </div>
+            <div className="SearchLine"></div>
+            <div>
+              <h4 className="text-center"> السعر</h4>
+              <input
+                type="text"
+                placeholder="إضافة السعر"
+                className="text-center form-control border-0 w-md-75 mx-auto search-inp"
+                name="Price Search"
+                onChange={(e) => setPriceSearch(e.target.value)}
+              />
+            </div>
+            {/* <div className="SearchIconDiv" onClick={handleSearch}> */}
+            <div className="SearchIconDiv">
+              <img
+                src={SearchIcon}
+                alt="Search icon"
+                className="Search-icon"
+                // onClick={handleSearch}
+              />
+            </div>
           </div>
-          <div className="SearchLine"></div>
-          <div>
-            <h4 className="text-center"> السعر</h4>
-            <input
-              type="text"
-              placeholder="إضافة السعر"
-              className="text-center form-control border-0 w-md-75 mx-auto search-inp"
-              name="Price Search"
-              onChange={(e) => setPriceSearch(e.target.value)}
-            />
-          </div>
-          {/* <div className="SearchIconDiv" onClick={handleSearch}> */}
-          <div className="SearchIconDiv" >
-            <img
-              src={SearchIcon}
-              alt="Search icon"
-              className="Search-icon"
-              // onClick={handleSearch}
-            />
-          </div>
-        </div>
-      </Container>
-      <Container fluid>
-        {/* <Row>{searchInitiated ? RoomsAfterSearch() : DrawRooms(rooms)}</Row> */}
-        <Row>{ RoomsAfterSearch() }</Row>
-      </Container>
-                
-    </div>
-    <Footer></Footer>
+        </Container>
+        <Container fluid>
+          {/* <Row>{searchInitiated ? RoomsAfterSearch() : DrawRooms(rooms)}</Row> */}
+          <Row>{RoomsAfterSearch()}</Row>
+        </Container>
+      </div>
+      <Footer></Footer>
     </>
   );
 }

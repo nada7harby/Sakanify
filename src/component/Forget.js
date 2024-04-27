@@ -14,7 +14,10 @@ import face from "../img/face.png";
 import gmail from "../img/gmail.png";
 import { Link } from "react-router-dom";
 
-function LoginForAll() {
+function Forget() {
+  var pass = document.getElementById("password");
+  var pass_sure = document.getElementById("password-sure");
+  var check = document.getElementById("check");
   const [password, setPassword] = useState("");
 
   const handlePasswordChange = (event) => {
@@ -23,7 +26,12 @@ function LoginForAll() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    Swal.fire("You  login in Done");
+    if (pass.value === pass_sure.value && pass.value !== "") {
+      Swal.fire("Your  password changed");
+      check.style.display = "none";
+    } else {
+      check.style.display = "block";
+    }
 
     localStorage.setItem("password", password);
   };
@@ -95,11 +103,11 @@ function LoginForAll() {
                   <div className=" form-row  col-6" style={{ width: "100%" }}>
                     <input
                       type="text"
-                      name="email"
+                      name="your-email"
                       id="your-email"
                       className="input-text "
-                      placeholder="رقم التليفون / البريد الالكتروني"
-                      required
+                      placeholder=" البريد الالكتروني"
+                      pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
                     />
                   </div>
                   <div
@@ -111,7 +119,7 @@ function LoginForAll() {
                       name="password"
                       id="password"
                       className="input-text pass"
-                      placeholder="كلمة السر"
+                      placeholder=" كلمة السر الجديدة"
                       required
                       onChange={handlePasswordChange}
                     />
@@ -120,7 +128,29 @@ function LoginForAll() {
                       onClick={togglePasswordVisibility}
                     ></i>
                   </div>
-                  <Link to="/forget_password"><span className="forget">هل نسيت كلمه السر ؟</span></Link>
+                  <div
+                    className=" form-row   col-6 password"
+                    style={{ width: "100%" }}
+                  >
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      name="password"
+                      id="password-sure"
+                      className="input-text pass"
+                      placeholder="تاكيد كلمة السر الجديدة"
+                      required
+                      onChange={handlePasswordChange}
+                    />
+                    <i
+                      class="fa-solid fa-eye"
+                      onClick={togglePasswordVisibility}
+                    ></i>
+                    <span className="check" id="check">
+                      {" "}
+                      يجب ان تكون كلمه المرور وتاكيد كلمه المرور متطابقين
+                    </span>
+                  </div>
+
                   <div className=" form-row  col-6-last">
                     <input
                       type="submit"
@@ -129,12 +159,6 @@ function LoginForAll() {
                       value="تسجيل"
                       // onClick={}
                     />
-                  </div>
-                  <div className="contact">
-                    <img src={face} alt="img" />
-                    <img src={gmail} alt="img" />
-                    <img src={insta} alt="img" />
-                    <img src={twiter} alt="img" />
                   </div>
                 </div>
               </form>
@@ -175,4 +199,4 @@ function LoginForAll() {
     </>
   );
 }
-export default LoginForAll;
+export default Forget;

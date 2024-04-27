@@ -43,7 +43,7 @@ function BasicExample() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/ContactUs">
+              <Link className="nav-link" to="/Contactus">
                 {" "}
                 تواصل معنا
               </Link>

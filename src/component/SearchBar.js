@@ -5,7 +5,19 @@ import sett from "../img/sett.png";
 import sec from "../img/sec.png";
 import home from "../img/home.png";
 import block from "../img/block.png";
+import { useState } from "react";
+
 function SearchBar() {
+  const [serviceType, setServiceType] = useState("");
+
+  const handleServiceTypeChange = (selectedType) => {
+    setServiceType(selectedType);
+  };
+
+  const handleSearch = () => {
+    // Here you can use the selected serviceType for further actions, such as filtering search results
+    console.log("Selected Service Type:", serviceType);
+  };
   return (
     <>
       <div className="container">
@@ -14,7 +26,7 @@ function SearchBar() {
             <div className="row cols-search justify-content-around  ">
               <div className="col-lg-3 col-6 mt-2 mb-2">
                 <Link to="/Rooms">
-                  <button className="btn-search">بحث</button>
+                  <button className="btn-search" onClick={handleSearch}>بحث</button>
                 </Link>
               </div>
               <div className="col-lg-3 col-6 mt-2 mb-2">

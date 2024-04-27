@@ -11,8 +11,21 @@ import insta from "../img/inst.png";
 import face from "../img/face.png";
 import gmail from "../img/gmail.png";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function LoginOwner() {
+  const [password, setPassword] = useState("");
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    Swal.fire("Your Register in Done");
+
+    localStorage.setItem("password", password);
+  };
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -47,7 +60,12 @@ function LoginOwner() {
         <div className="container login">
           <div className="row justify-content-between form-v6-content">
             <div className="col-lg-6">
-              <form className="form-detail " action="#" method="post">
+              <form
+                className="form-detail "
+                action="#"
+                method="post"
+                onSubmit={handleSubmit}
+              >
                 <div className="logo_users">
                   {/* <img id="logo" src={loginunder} className="logo" alt="img" /> */}
                   {logoSrc && (
@@ -109,6 +127,7 @@ function LoginOwner() {
                       className="input-text pass"
                       placeholder="كلمة السر"
                       required
+                      onChange={handlePasswordChange}
                     />
                     <i
                       class="fa-solid fa-eye"
