@@ -58,7 +58,7 @@ function OwnerProfile() {
                                   id="password"
                                   className="input-text pass"
                                   placeholder="كلمة السر"
-                                 value="admin.99"
+                                 value="admin.410"
                                   required
                                 />
                             <i class="fa-solid fa-eye-slash"  onClick={togglePasswordVisibility}></i>
