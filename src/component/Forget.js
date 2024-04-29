@@ -102,7 +102,7 @@ function Forget() {
                 <div className="row content-form">
                   <div className=" form-row  col-6" style={{ width: "100%" }}>
                     <input
-                      type="text"
+                      type="email"
                       name="your-email"
                       id="your-email"
                       className="input-text "
