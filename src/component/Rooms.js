@@ -352,13 +352,15 @@ function Rooms() {
       } else {
         setSelectedRooms([...SelectedRooms, roomId]);
       }
-    }
-    else{
+    } else {
       Swal.fire("You should login at first ");
     }
-  }
+  };
   const handleShow = (index) => {
     setShowModal((prev) => {
+      if (localStorage.getItem("password") === "") {
+        Swal.fire("You should login at first ");
+      }
       const updatedState = [...prev];
       updatedState[index] = true;
       return updatedState;
@@ -502,14 +504,22 @@ function Rooms() {
                           icon={faPhoneVolume}
                           style={{ marginLeft: "6px" }}
                         />{" "}
-                        {room.owner.phone}
+                        {/* {room.owner.phone} */}
+                        {numberCheck === ""
+                          ? room.owner.phone.slice(0, 3) +
+                            "X".repeat(room.owner.phone.length - 3)
+                          : room.owner.phone}
                       </p>
                       <p>
                         <FontAwesomeIcon
                           icon={faEnvelope}
                           style={{ marginLeft: "6px" }}
                         />{" "}
-                        {room.owner.ownerMail}
+                        {/* {room.owner.ownerMail} */}
+                        {numberCheck === ""
+                          ? room.owner.ownerMail.slice(0, 3) +
+                            "X".repeat(room.owner.ownerMail.length - 3)
+                          : room.owner.ownerMail}
                       </p>
                       <p>
                         <FontAwesomeIcon
