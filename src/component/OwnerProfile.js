@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "./Footer";
 
 import userImage from "../img/Ellipse 41.png";
+import { Link } from "react-router-dom";
 
 function OwnerProfile() {
    const [showPassword, setShowPassword] = useState(false);
@@ -58,7 +59,7 @@ function OwnerProfile() {
                                   id="password"
                                   className="input-text pass"
                                   placeholder="كلمة السر"
-                                 value="admin.410"
+                                 value="admin.99"
                                   required
                                 />
                             <i class="fa-solid fa-eye-slash"  onClick={togglePasswordVisibility}></i>
@@ -66,7 +67,7 @@ function OwnerProfile() {
              
             </div>
 
-            <button className="toPost"> ارفع مسكنك علي Sakanify </button>
+           <Link to="/upload"> <button className="toPost"> ارفع مسكنك علي Sakanify </button></Link>
           </div>
 
           <div className="ownnerCol col-sm-11 mx-md-auto col-lg-4">
