@@ -12,6 +12,8 @@ import StudentProfile from "./component/StudentProfile.js";
 import OwnerProfile from "./component/OwnerProfile.js";
 import LoginForAll from "./component/Login.js";
 import Forget from "./component/Forget.js";
+import Upload from "./component/UploadPost.js";
+import Form from "./component/Form.js";
 import { Triangle, Vortex, ThreeDots } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
 
@@ -58,6 +60,8 @@ function App() {
               <Route index path="/OwnerProfile" Component={OwnerProfile} />
               <Route index path="/StudentProfile" Component={StudentProfile} />
               <Route index path="/forget_password" Component={Forget} />
+              <Route index path="/upload" Component={Upload} />
+              <Route index path="/form" Component={Form} />
             </Routes>
           </Router>
         </div>
