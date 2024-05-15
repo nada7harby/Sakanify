@@ -1,0 +1,151 @@
+
+
+.body {
+    background-color: #F3F3F3;
+}
+
+.uploadPostContainer {
+    padding:129px 65px;
+    /* margin: 165px auto; */
+}
+
+.uploadPostContainer h5 {
+    color: #1A284E;
+    direction: rtl;
+    margin: 20px 0;
+}
+
+.uploadPostContainer p {
+    direction: rtl;
+    color: #1A284E;
+}
+
+.uploadPostContainer .white {
+    background-color: white;
+    height: fit-content;
+    border: 1px dashed #8D8D8D;
+    text-align: center;
+    padding: 10px;
+}
+.uploadPostContainer .white img {
+    width: 50%;
+    height: 50%;
+}
+
+
+
+
+
+
+.uploadPostContainer .blue {
+    position: relative;
+    background-color: hsl(214, 43%, 84%, 77%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: ; */
+}
+
+.uploadPostContainer .blue button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-color: white;
+    border: 1px solid #8D8D8D;
+}
+
+
+
+
+.uploadRow {
+    direction: rtl;
+}
+
+.uploadCol {
+    /* height: 200px;
+    width: 50px; */
+}
+
+.uploadRow .col button {
+    padding: 20px;
+    margin: 20px 0;
+    border: #8D8D8D 0.5px solid;
+    background-color: #fff;
+
+}
+
+
+.uploadRow textarea {
+    direction: rtl;
+    width: 60%;
+    border: #8D8D8D 0.5px solid;
+    outline: none;
+}
+
+.uploadRow .price {
+    width: 15%;
+}
+
+.post {
+    background-color: #1A284E;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+
+i {
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+
+.upload {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: #ddd 1px dashed;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.addressData input {
+    padding: 20px;
+    margin: 20px 0;
+    border: #8D8D8D 0.5px solid;;
+    outline: none;
+    width: 60%;
+}
+
+.dashFeatures {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+.featureTitle {
+    width: 15%;
+}
+
+.dashFeatures .btnn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: none;
+    margin: 0 20px;
+}
+
+.fIcon {
+    width: 15%;
+}
+
+.fIcon button {
+    width: 100%;
+}
