@@ -4,6 +4,15 @@ import logo_user from "../img/user.png";
 import "../css/Nav.css";
 
 function BasicExample() {
+  var role = JSON.parse(localStorage.getItem("role"));
+  // var role = localStorage.getItem("role")
+  var userLink = "/"; // القيمة الافتراضية إذا لم يكن هناك دور محدد
+
+  if (role === "owner") {
+    userLink = "/Ownerprofile";
+  } else if (role === "student") {
+    userLink = "/studentProfile";
+  } 
   return (
     <nav className="navbar navbar-expand-lg  ">
       <div className="container">
@@ -43,22 +52,38 @@ function BasicExample() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Contactus">
+              <Link className="nav-link" to="/ContactUs">
                 {" "}
                 تواصل معنا
               </Link>
             </li>
           </ul>
-          <div className=" Login_tab nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-            <span className="navbar-toggler-icon"></span>
-              <img src={logo_user} alt="img"/>
+          <div className=" Login_tab nav-link " href="#">
+            <span
+              className="navbar-toggler-icon dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            ></span>
+            <ul className="dropdown-menu">
+              <li>
+                <Link className="dropdown-item" to="/login">
+                  تسجيل الدخول
+                </Link>
+              </li>
+              <li>
+                <hr className="dropdown-divider" />
+              </li>
+              <li>
+                <Link className="dropdown-item" to="/register">
+                  انشاء حساب جديد
+                </Link>
+              </li>
+            </ul>
+            <Link to={userLink}>
+              <img src={logo_user} alt="img" />
+            </Link>
           </div>
-
-          <ul className="dropdown-menu">
-            <li><Link className="dropdown-item" to="/login">تسجيل الدخول</Link></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><Link className="dropdown-item" to="/register" >انشاء حساب جديد</Link></li>
-          </ul>
         </div>
       </div>
     </nav>
