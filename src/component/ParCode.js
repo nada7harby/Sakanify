@@ -1,4 +1,6 @@
 import "../css/Login.css";
+import Swal from "sweetalert2";
+
 import Nav from "./Nav";
 import React, { useState, useEffect } from "react";
 import loginunder from "../img/logounder.png";
@@ -11,68 +13,27 @@ import insta from "../img/inst.png";
 import face from "../img/face.png";
 import gmail from "../img/gmail.png";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
 
-function LoginOwner() {
+function ParCode() {
+  var pass = document.getElementById("password");
+  var pass_sure = document.getElementById("password-sure");
+  var check = document.getElementById("check");
   const [password, setPassword] = useState("");
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   Swal.fire("Your Register in Done");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (pass.value === pass_sure.value && pass.value !== "") {
+      Swal.fire("Your  password changed");
+      check.style.display = "none";
+    } else {
+      check.style.display = "block";
+    }
 
-  //   //localStorage.setItem("password", password);
-  // };
-  const [formData, setFormData] = useState({
-    name: "",
-    password: "",
-    nationalId:"",
-    phone:"",
-    faculty:"",
-    email:"",
-    gender:"",
-    role:"student",
-
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-      [e.target.password]: e.target.value,
-      [e.target.nationalId]: e.target.value,
-      [e.target.phone]: e.target.value,
-      [e.target.faculty]: e.target.value,
-      [e.target.email]: e.target.value,
-      [e.target.gender]: e.target.value,
-      // [e.target.role]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // localStorage.setItem("password", password);
-    // Swal.fire("Your Login is Done");
-    // Send data to API
-    fetch("https://sakanify.onrender.com/api/v1/students/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle API response
-        console.log(data);
-        
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    localStorage.setItem("password", password);
   };
   const [showPassword, setShowPassword] = useState(false);
 
@@ -108,12 +69,7 @@ function LoginOwner() {
         <div className="container login">
           <div className="row justify-content-between form-v6-content">
             <div className="col-lg-6">
-              <form
-                className="form-detail "
-                action="#"
-                method="post"
-                onSubmit={handleSubmit}
-              >
+              <form className="form-detail " onSubmit={handleSubmit}>
                 <div className="logo_users">
                   {/* <img id="logo" src={loginunder} className="logo" alt="img" /> */}
                   {logoSrc && (
@@ -144,70 +100,31 @@ function LoginOwner() {
                 </div>
                 <h1 className="login_word"> تسجيل</h1>
                 <div className="row content-form">
-                  <div className=" form-row  col-6 " style={{ width: "100%" }}>
-                    <input
-                      type="text"
-                      name="full-name"
-                      id="full-name"
-                      className="input-text user"
-                      placeholder="الاسم"
-                      required
-                    />
-                  </div>
-                  <div className=" form-row  col-6" style={{ width: "100%" }}>
-                    <input
-                      type="text"
-                      name="your-email"
-                      id="your-email"
-                      className="input-text "
-                      placeholder="البريد الالكتروني"
-                      pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
-                    />
-                  </div>
                   <div
                     className=" form-row   col-6 password"
                     style={{ width: "100%" }}
                   >
                     <input
-                      type={showPassword ? "text" : "password"}
+                      type="text"
                       name="password"
                       id="password"
                       className="input-text pass"
-                      placeholder="كلمة السر"
-                      required
-                      onChange={handlePasswordChange}
-                    />
-                    <i
-                      class="fa-solid fa-eye"
-                      onClick={togglePasswordVisibility}
-                    ></i>
-                  </div>
-                  <div className=" form-row  col-6 " style={{ width: "100%" }}>
-                    <input
-                      type="text"
-                      name="number"
-                      id="full-name"
-                      className="input-text user"
-                      placeholder="رقم الهاتف"
+                      placeholder=" ادخل الرمز"
                       required
                     />
-                    <input type="text" name="role" value="owner" className="d-none"/>
                   </div>
 
-                  <div className=" form-row  col-6-last">
-                    <input
-                      type="submit"
-                      name="register"
-                      className="register"
-                      value="تسجيل"
-                    />
-                  </div>
-                  <div className="contact">
-                    <img src={face} alt="img" />
-                    <img src={gmail} alt="img" />
-                    <img src={insta} alt="img" />
-                    <img src={twiter} alt="img" />
-                  </div>
+                  <Link to="/change_password">
+                    <div className=" form-row  col-6-last">
+                      <input
+                        type="submit"
+                        name="register"
+                        className="register"
+                        value="تسجيل"
+                        // onClick={}
+                      />
+                    </div>
+                  </Link>
                 </div>
               </form>
             </div>
@@ -233,11 +150,11 @@ function LoginOwner() {
               <div className="Button-login">
                 <Link to="/register">
                   {" "}
-                  <div style={{ color: "#DDB20C" }}>تسجيل </div>
+                  <div>تسجيل الدخول</div>
                 </Link>
                 <Link to="/login">
                   {" "}
-                  <div>تسجيل الدخول</div>
+                  <div style={{ color: "#DDB20C" }}>تسجيل </div>
                 </Link>
               </div>
             </div>
@@ -247,4 +164,4 @@ function LoginOwner() {
     </>
   );
 }
-export default LoginOwner;
+export default ParCode;

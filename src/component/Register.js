@@ -23,13 +23,61 @@ function Login() {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
+  const [formData, setFormData] = useState({
+    name: "",
+    password: "",
+    nationalId:"",
+    phone:"",
+    faculty:"",
+    email:"",
+    gender:"",
+    role:"student",
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    Swal.fire("Your Register in Done");
+  });
 
-    localStorage.setItem("password", password);
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+      [e.target.password]: e.target.value,
+      [e.target.nationalId]: e.target.value,
+      [e.target.phone]: e.target.value,
+      [e.target.faculty]: e.target.value,
+      [e.target.email]: e.target.value,
+      [e.target.gender]: e.target.value,
+      // [e.target.role]: e.target.value,
+    });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+     localStorage.setItem("password", password);
+    localStorage.setItem("formData", JSON.stringify(formData));
+    Swal.fire("Your Login is Done");
+    // Send data to API
+    fetch("https://sakanify.onrender.com/api/v1/students/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle API response
+        console.log(data);
+        localStorage.setItem("formData", JSON.stringify(data.token));
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   Swal.fire("Your Register in Done");
+
+  //   localStorage.setItem("password", password);
+  // };
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -66,7 +114,8 @@ function Login() {
             <div className="col-lg-6">
               <form
                 className="form-detail "
-                action="#"
+                id="myFormId"
+                action="https://sakanify.onrender.com/api/v1/students/signup"
                 method="post"
                 onSubmit={handleSubmit}
               >
@@ -97,52 +146,77 @@ function Login() {
                   <div className=" form-row  col-6 ">
                     <input
                       type="text"
-                      name="full-name"
+                      name="name"
                       id="full-name"
                       className="input-text user"
                       placeholder="الاسم"
                       required
+                      value={formData.name}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setFormData({ ...formData, name: e.target.value });
+                      }}
                     />
                   </div>
                   <div className=" form-row  col-6 ">
                     <input
                       type="text"
-                      name="Id"
+                      name="nationalId"
                       id="full-name"
                       className="input-text user"
                       placeholder="رقم البطاقة"
                       required
+                      value={formData.nationalId}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setFormData({ ...formData, nationalId: e.target.value });
+                      }}
                     />
                   </div>
                   <div className=" form-row  col-6 ">
                     <input
                       type="text"
-                      name="number"
+                      name="phone"
                       id="full-name"
                       className="input-text user"
                       placeholder="رقم التليفون"
                       required
+                      value={formData.phone}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setFormData({ ...formData, phone: e.target.value });
+                      }}
                     />
                   </div>
                   <div className=" form-row  col-6 ">
                     <input
                       type="text"
-                      name="collage"
+                      name="faculty"
                       id="full-name"
                       className="input-text user"
                       placeholder="الكلية"
                       required
+                      value={formData.faculty}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setFormData({ ...formData, faculty: e.target.value });
+                      }}
                     />
                   </div>
                   <div className=" form-row  col-6">
                     <input
-                      type="email"
-                      name="your-email"
+                      type="text"
+                      name="email"
                       id="your-email"
                       className="input-text "
                       placeholder="البريد الالكتروني"
                       required
                       pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+                      value={formData.email}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setFormData({ ...formData, email: e.target.value });
+                      }}
                     />
                   </div>
                   <div className=" form-row  col-6 ">
@@ -152,7 +226,7 @@ function Login() {
                       id="full-name"
                       className="input-text user"
                       placeholder="الفرقة"
-                      required
+                      
                     />
                   </div>
                   <div className=" form-row   col-6 password">
@@ -163,7 +237,21 @@ function Login() {
                       className="input-text pass"
                       placeholder="كلمة السر"
                       required
-                      onChange={handlePasswordChange}
+                      // onChange={handlePasswordChange}
+                      value={formData.password}
+                      onChange={(e) => {
+                        setFormData({ ...formData, password: e.target.value });
+                        handlePasswordChange(e);
+                      }}
+                      
+                    />
+                    <input type="text" name="role" value="student" 
+                    
+                    // onChange={(e) => {
+                    //   console.log(e.target.value);
+                      
+                    // }}
+                    className="d-none" 
                     />
                     <i
                       class="fa-solid fa-eye"
@@ -175,21 +263,31 @@ function Login() {
                     <div>
                       <input
                         type="radio"
-                        name="type"
+                        name="gender"
                         id="for-girl"
                         className="input-text "
-                        value="ذكر"
+                        // value="ذكر"
                         required
+                        value ="male"
+                        onChange={(e) => {
+                          setFormData({ ...formData, gender: e.target.value });
+                          
+                        }}
                       />
                       <label id="for-boy">انثي</label>
                     </div>
                     <div>
                       <input
                         type="radio"
-                        name="type"
+                        name="gender"
                         id="for-boy"
                         className="input-text "
                         required
+                        value ="female"
+                        onChange={(e) => {
+                          setFormData({ ...formData, gender: e.target.value });
+                          
+                        }}
                       />
                       <label id="for-boy">ذكر</label>
                     </div>
@@ -230,11 +328,11 @@ function Login() {
               <div className="Button-login">
                 <Link to="/register">
                   {" "}
-                  <div style={{ color: "#DDB20C" }}>تسجيل الدخول</div>
+                  <div style={{ color: "#DDB20C" }}>تسجيل </div>
                 </Link>
                 <Link to="/login">
                   {" "}
-                  <div>تسجيل </div>
+                  <div>تسجيل الدخول</div>
                 </Link>
               </div>
             </div>

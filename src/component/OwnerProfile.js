@@ -1,6 +1,7 @@
 import "../css/OwnerProfile.css";
-import Nav from "./Nav";
+
 import React, { useState, useEffect } from "react";
+import Nav from "./Nav";
 import Footer from "./Footer";
 
 import userImage from "../img/Ellipse 41.png";
