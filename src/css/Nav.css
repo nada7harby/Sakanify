@@ -62,8 +62,8 @@ nav .dropdown-toggle::after {
 }
 nav .dropdown-menu {
   position: absolute;
-  left: 3% !important;
-  top: 90% !important;
+  left: -45% !important;
+  top: 98% !important;
   background-color: #fff;
   text-align: center;
 }

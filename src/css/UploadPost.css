@@ -1,151 +1,231 @@
-
-
 .body {
-    background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 
 .uploadPostContainer {
-    padding:129px 65px;
-    /* margin: 165px auto; */
+  padding: 129px 65px;
+  /* margin: 165px auto; */
 }
 
 .uploadPostContainer h5 {
-    color: #1A284E;
-    direction: rtl;
-    margin: 20px 0;
+  color: #1a284e;
+  direction: rtl;
+  margin: 20px 0;
 }
 
 .uploadPostContainer p {
-    direction: rtl;
-    color: #1A284E;
+  direction: rtl;
+  color: #1a284e;
 }
 
 .uploadPostContainer .white {
-    background-color: white;
-    height: fit-content;
-    border: 1px dashed #8D8D8D;
-    text-align: center;
-    padding: 10px;
+  background-color: white;
+  height: fit-content;
+  border: 1px dashed #8d8d8d;
+  text-align: center;
+  padding: 10px;
 }
 .uploadPostContainer .white img {
-    width: 50%;
-    height: 50%;
+  width: 50%;
+  height: 50%;
 }
-
-
-
-
-
 
 .uploadPostContainer .blue {
-    position: relative;
-    background-color: hsl(214, 43%, 84%, 77%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* height: ; */
+  position: relative;
+  background-color: hsl(214, 43%, 84%, 77%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: ; */
 }
 
-.uploadPostContainer .blue button {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 25%;
-    background-color: white;
-    border: 1px solid #8D8D8D;
+.uploadPostContainer .blue div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background-color: white;
+  border: 1px solid #8d8d8d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
-
+.uploadPostContainer .blue div span {
+  padding: 0px 5px;
+}
+.type-room {
+  position: relative;
+  display: flex;
+}
+.type-room label {
+  width: 100%;
+  height: 60px;
+  /* padding-right: 40px; */
+  background-color: #fffbfb;
+  /* border: 1px solid #000; */
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.type-room input {
+  visibility: hidden;
+}
+.type-room i {
+  position: absolute;
+  top: 35%;
+  right: 10%;
+}
 
 .uploadRow {
-    direction: rtl;
+  direction: rtl;
 }
 
 .uploadCol {
-    /* height: 200px;
+  /* height: 200px;
     width: 50px; */
 }
 
 .uploadRow .col button {
-    padding: 20px;
-    margin: 20px 0;
-    border: #8D8D8D 0.5px solid;
-    background-color: #fff;
-
+  padding: 20px;
+  margin: 20px 0;
+  border: #8d8d8d 0.5px solid;
+  background-color: #fff;
 }
 
-
 .uploadRow textarea {
-    direction: rtl;
-    width: 60%;
-    border: #8D8D8D 0.5px solid;
-    outline: none;
+  direction: rtl;
+  width: 60%;
+  border: #8d8d8d 0.5px solid;
+  outline: none;
 }
 
 .uploadRow .price {
-    width: 15%;
+  width: 15%;
 }
 
 .post {
-    background-color: #1A284E;
-    color: #fff;
-    padding: 20px 30px;
-    border-radius: 10px;
+  background-color: #1a284e;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 10px 42px;
 }
-
 
 i {
-    font-size: 20px;
-    padding: 0 10px;
+  font-size: 20px;
+  padding: 0 10px;
 }
 
-
 .upload {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border: #ddd 1px dashed;
-    outline: none;
-    cursor: pointer;
-
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: #ddd 1px dashed;
+  outline: none;
+  cursor: pointer;
 }
 
 .addressData input {
-    padding: 20px;
-    margin: 20px 0;
-    border: #8D8D8D 0.5px solid;;
-    outline: none;
-    width: 60%;
+  padding: 20px;
+  margin: 20px 0;
+  border: #8d8d8d 0.5px solid;
+  outline: none;
+  width: 60%;
 }
 
 .dashFeatures {
-    display: flex;
-    justify-content: flex-end;
-
+  display: flex;
+  justify-content: flex-end;
 }
 
-
 .featureTitle {
-    width: 15%;
+  width: 15%;
 }
 
 .dashFeatures .btnn {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    border: none;
-    margin: 0 20px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: none;
+  margin: 0 20px;
 }
 
 .fIcon {
-    width: 15%;
+  /* width: 17%; */
+  position: relative;
+  display: flex;
+  cursor: pointer;
 }
 
-.fIcon button {
-    width: 100%;
+.fIcon label {
+  width: 100%;
+  /* padding-right: 28%; */
+  height: 66px;
+  background: #fff;
+  color: #000;
+  margin: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fIcon i {
+  position: absolute;
+  top: 37%;
+  right: 15%;
+}
+.fIcon input {
+  visibility: hidden;
+}
+.dashFeatures input {
+  width: 10%;
+  height: 40%;
+  background: transparent;
+  border: none;
+}
+.dashFeatures p {
+  cursor: pointer;
+}
+.dashFeatures .d-flex {
+  justify-content: flex-end;
+}
+
+#fu7:hover label {
+  background-color: #1a284e;
+}
+.uploaddd input[type="checkbox"]:checked + label {
+  background-color: #ddb20c;
+}
+
+.uploaddd input[type="radio"]:checked + label {
+  background-color: #ddb20c;
+}
+@media (max-width: 730px) {
+  .uploadRow {
+    justify-content: center;
+  }
+  .uploadPostContainer .blue {
+    height: 270px;
+    margin-top: 10px;
+  }
+  .dashFeatures {
+    display: flex;
+    justify-content: center;
+  }
+  .dashFeatures .d-flex {
+    justify-content:center;
+}
+.uploadRow textarea{
+  width:100%;
+}
+.uploadRow .price {
+  width: 100%;
+}
 }
