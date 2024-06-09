@@ -4,6 +4,7 @@ import logo from "./img/Final_2_with_less_ distance.png";
 import Home from "./component/Home";
 import Services from "./component/Services";
 import Rooms from "./component/Rooms";
+import Room_after_search from "./component/Roooms2.js";
 import Login from "./component/Register.js";
 import LoginOwner from "./component/RegisterOwner.js";
 import RoomDetails from "./component/RoomDetails.js";
@@ -13,12 +14,19 @@ import OwnerProfile from "./component/OwnerProfile.js";
 import LoginForAll from "./component/Login.js";
 import Forget from "./component/Forget.js";
 import Upload from "./component/UploadPost.js";
+import Change_password from "./component/Change_password.js";
+import ParCode from "./component/ParCode.js";
+import Check_email from "./component/Check_email.js";
 import Form from "./component/Form.js";
-import { Triangle, Vortex, ThreeDots } from "react-loader-spinner";
+import MyComponent from "./component/Test.js";
+import Plans from "./component/Plan.js";
+import { ThreeDots } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
+
 
 function App() {
   localStorage.setItem("password", "");
+  localStorage.setItem("userid", "");
   const [load, Setload] = useState(false);
   useEffect(() => {
     Setload(true);
@@ -62,6 +70,12 @@ function App() {
               <Route index path="/forget_password" Component={Forget} />
               <Route index path="/upload" Component={Upload} />
               <Route index path="/form" Component={Form} />
+              <Route index path="/Check_email" Component={Check_email} />
+              <Route index path="/Parcode" Component={ParCode} />
+              <Route index path="/Change_password" Component={Change_password} />
+              <Route index path="/Room_after_search" Component={Room_after_search} />
+              <Route index path="/MyComponent" Component={MyComponent} />
+              <Route index path="/Plan" Component={Plans} />
             </Routes>
           </Router>
         </div>
