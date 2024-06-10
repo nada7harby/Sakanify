@@ -89,12 +89,12 @@
   border: none
 }
 .OwImg_book {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  right: 9%;
-  bottom: 9%;
   border-radius: 50%;
+    bottom: 10%;
+    height: 35px;
+    position: absolute;
+    right: 7%;
+    width: 35px;
 }
 .card .active {
   text-decoration: none !important;
