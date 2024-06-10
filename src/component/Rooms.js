@@ -1,5 +1,5 @@
-import React from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
@@ -7,13 +7,22 @@ import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 import CloseButton from "react-bootstrap/CloseButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faStar, faPhoneVolume, faEnvelope, faAward } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faStar,
+  faPhoneVolume,
+  faEnvelope,
+  faAward,
+} from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
+
 
 import Nav from "./Nav";
 import Footer from "./Footer";
 
+
+// Elements images
 import starImg from "../img/Full-star.png";
 import HalfStar from "../img/Half-star.png";
 import BookImg from "../img/Book.png";
@@ -22,10 +31,6 @@ import HostIcon from "../img/host-icon.png";
 import "../css/OurRooms.css";
 
 function Rooms() {
-  const [favorites, setFavorites] = useState(() => {
-    const savedFav = localStorage.getItem("Fav");
-    return savedFav ? JSON.parse(savedFav) : [];
-  });
   const [roomData, setRoomData] = useState([]);
   const [showModal, setShowModal] = useState([]);
   const [SelectedRooms, setSelectedRooms] = useState([]);
@@ -35,9 +40,11 @@ function Rooms() {
   useEffect(() => {
     const getRoom = async () => {
       try {
-        const response = await fetch("https://sakanify.onrender.com/api/v1/posts");
+        const response = await fetch(
+          "https://sakanify.onrender.com/api/v1/posts"
+        );
         const data = await response.json();
-        console.log("Fetched data:", data);
+        console.log("Fetched data:", data); // Debugging log
         setRoomData(data.data.posts);
         setShowModal(Array(data.data.posts.length).fill(false));
       } catch (error) {
@@ -48,13 +55,12 @@ function Rooms() {
     getRoom();
   }, []);
 
-  const toggleRoom = (room) => {
+  const toggleRoom = (roomId) => {
     setSelectedRooms((prevSelectedRooms) =>
-      prevSelectedRooms.includes(room._id)
-        ? prevSelectedRooms.filter((id) => id !== room._id)
-        : [...prevSelectedRooms, room._id]
+      prevSelectedRooms.includes(roomId)
+        ? prevSelectedRooms.filter((id) => id !== roomId)
+        : [...prevSelectedRooms, roomId]
     );
-    addToFavorites(room);
   };
 
   const handleShow = (index) => {
@@ -72,21 +78,6 @@ function Rooms() {
       return updatedState;
     });
   };
-
-  const addToFavorites = (product) => {
-    setFavorites((prevFavorites) => {
-      const isFavorite = prevFavorites.find((fav) => fav._id === product._id);
-      let updatedFav;
-      if (isFavorite) {
-        updatedFav = prevFavorites.filter((fav) => fav._id !== product._id);
-      } else {
-        updatedFav = [...prevFavorites, product];
-      }
-      localStorage.setItem("Fav", JSON.stringify(updatedFav));
-      return updatedFav;
-    });
-  };
-
   function sliceTextUntilComma(text) {
     if (!text) return "";
     const index = text.indexOf("،");
@@ -97,11 +88,11 @@ function Rooms() {
   const HostTilteFunc = (HostRate) => (HostRate > 4 ? "مضيف متميز" : "مضيف");
 
   const DrawRooms = (filteredRooms) => {
-    console.log("Filtered rooms:", filteredRooms);
+    console.log("Filtered rooms:", filteredRooms); // Debugging log
 
     if (!filteredRooms || !Array.isArray(filteredRooms)) {
-      console.error("Invalid filteredRooms:", filteredRooms);
-      return null;
+      console.error("Invalid filteredRooms:", filteredRooms); // Debugging log
+      return null; // Return null or a fallback UI when filteredRooms is not valid
     }
 
     return filteredRooms.map((room, index) => (
@@ -116,6 +107,12 @@ function Rooms() {
                   className="Swiper-Image"
                 />
               </SwiperSlide>
+              {/* <SwiperSlide>
+                    <img src={room.imagesUrl[0]} alt="logo" className="Swiper-Image"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={room.imageUrl[1]} alt="logo" className="Swiper-Image"/>
+                </SwiperSlide> */}
               {room.imagesUrl.slice(0, 2).map((image, idx) => (
                 <SwiperSlide key={idx}>
                   <img
@@ -128,13 +125,12 @@ function Rooms() {
             </Link>
           </Swiper>
           <h4>
-            {" "}
             <FontAwesomeIcon
               icon={faHeart}
               className="OurRooms-Heart-icon"
-              onClick={() => toggleRoom(room)}
+              onClick={() => toggleRoom(room._id)}
               style={{
-                color: favorites.some((fav) => fav._id === room._id)
+                color: SelectedRooms.includes(room._id)
                   ? "rgb(208, 39, 39)"
                   : "white",
               }}
@@ -156,7 +152,10 @@ function Rooms() {
               style={{ backgroundColor: "#f3f3f3" }}
               className="rounded-3 border-0"
             >
-              <CloseButton onClick={() => handleClose(index)} className="mb-3" />
+              <CloseButton
+                onClick={() => handleClose(index)}
+                className="mb-3"
+              />
               <Container>
                 <Row className="owner-model-div p-3 d-flex">
                   <Col sm={6} className="text-center">
@@ -167,7 +166,11 @@ function Rooms() {
                     />
                     <h3 className="mt-3 font-Weigth">{room.name}</h3>
                     <p>
-                      <img src={HostIcon} className="host-icon" alt="host title" />
+                      <img
+                        src={HostIcon}
+                        className="host-icon"
+                        alt="host title"
+                      />
                       {HostTilteFunc(room.ratingsAverage)}
                     </p>
                   </Col>
@@ -227,6 +230,7 @@ function Rooms() {
                 <Card.Text className="Card-Text">
                   {sliceTextUntilComma(room.description)}
                 </Card.Text>
+                {/* <Card.Text className="Card-Text">شقة مكونة من 3 غرف نوم و2 حمام في الترعة المردومة</Card.Text>  */}
                 <p className="Room-Price">{room.price} ج.م</p>
               </div>
               <div className="d-flex">
@@ -235,7 +239,7 @@ function Rooms() {
                   alt="Rate star"
                   className="Star-img"
                 />
-                <p style={{ color: "black" }}>{room.ratingsAverage}</p>
+                <p style={{color:"black"}}>{room.ratingsAverage}</p>
               </div>
             </Card.Body>
           </Link>
@@ -264,39 +268,39 @@ function Rooms() {
 
   return (
     <>
-      <Nav />
-      <div className="Rooms">
-        <Container fluid className="py-4">
-          <div className="Div mx-auto d-flex justify-content-center align-items-center mb-3">
-            <div>
-              <h4 className="text-center"> المكان</h4>
-              <input
-                type="text"
-                placeholder="البحث عن وجهات"
-                className="text-center form-control border-0 mx-auto search-inp"
-                name="Place Search"
-                onChange={(e) => setPlaceSearch(e.target.value)}
-              />
-            </div>
-            <div className="SearchLine"></div>
-            <div>
-              <h4 className="text-center"> السعر</h4>
-              <input
-                type="text"
-                placeholder="إضافة السعر"
-                className="text-center form-control border-0 w-md-75 mx-auto search-inp"
-                name="Price Search"
-                onChange={(e) => setPriceSearch(e.target.value)}
-              />
-            </div>
-            <div className="SearchIconDiv">
-              <img src={SearchIcon} alt="search Icon" className="SearchIcon" />
-            </div>
+    <Nav/>
+    <div className="Rooms">
+      <Container fluid className="py-4">
+        <div className="Div mx-auto d-flex justify-content-center align-items-center mb-3">
+          <div>
+            <h4 className="text-center"> المكان</h4>
+            <input
+              type="text"
+              placeholder="البحث عن وجهات"
+              className="text-center form-control border-0 mx-auto search-inp"
+              name="Place Search"
+              onChange={(e) => setPlaceSearch(e.target.value)}
+            />
           </div>
-          <Row>{RoomsAfterSearch()}</Row>
-        </Container>
-      </div>
-      <Footer />
+          <div className="SearchLine"></div>
+          <div>
+            <h4 className="text-center"> السعر</h4>
+            <input
+              type="text"
+              placeholder="إضافة السعر"
+              className="text-center form-control border-0 w-md-75 mx-auto search-inp"
+              name="Price Search"
+              onChange={(e) => setPriceSearch(e.target.value)}
+            />
+          </div>
+          {/* <div className="SearchIconDiv">
+            <img src={SearchIcon} alt="search Icon" className="SearchIcon" />
+          </div> */}
+        </div>
+        <Row>{RoomsAfterSearch()}</Row>
+      </Container>
+    </div>
+    <Footer/>
     </>
   );
 }
