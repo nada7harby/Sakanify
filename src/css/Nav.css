@@ -36,10 +36,10 @@ nav.navbar {
   font-style: normal;
   font-variation-settings: "HEXP" 0;
 }
-nav .active {
-  color: #f3c716 !important;
-  text-decoration: underline;
-}
+/* nav .active {
+  /* color: #f3c716 !important; */
+  /* text-decoration: underline; */
+/* } */
 .navbar-brand img {
   width: 120px;
 }
@@ -62,8 +62,8 @@ nav .dropdown-toggle::after {
 }
 nav .dropdown-menu {
   position: absolute;
-  left: -45% !important;
-  top: 98% !important;
+  left: -68% !important;
+  top: 100% !important;
   background-color: #fff;
   text-align: center;
 }

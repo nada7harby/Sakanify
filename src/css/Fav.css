@@ -1,0 +1,145 @@
+body {
+  background-color: #f3f3f3;
+}
+
+.ownerContainer {
+  padding: 120px 65px;
+}
+.ownerRow {
+  /* background-color: red; */
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 150px; */
+  /* margin: 165px auto; */
+  border-radius: 30px;
+}
+
+.ownnerCol h2 {
+  margin: auto;
+}
+
+.dataForOwner {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.dataForOwner i {
+  font-size: 30px;
+  padding: 1px;
+  margin-left: 5%;
+}
+.dataForOwner img {
+  margin-left: 20px;
+}
+.dataForOwner span {
+  font-size: 25px;
+}
+
+.ownerData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+  height: fit-content;
+}
+.password input {
+  width: 92%;
+  padding: 0px 15px 10px 15px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #d3d3d3;
+  appearance: unset;
+  -moz-appearance: unset;
+  -webkit-appearance: unset;
+  -o-appearance: unset;
+  -ms-appearance: unset;
+  -moz-outline: none;
+  -webkit-outline: none;
+  -o-outline: none;
+  -ms-outline: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  background-color: #f3f3f3;
+  border: none;
+}
+.password {
+  position: relative;
+}
+.password i.eye {
+  position: absolute;
+  color: #1a284e;
+  left: -1%;
+  font-size: 17px;
+  top: 14%;
+}
+
+.ownerImg {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.ownerData h2 {
+  color: #ddb20c;
+  font-size: 25px;
+}
+.ownerData p {
+  font-size: 20px;
+}
+
+.toPost {
+  background-color: #ddb20c;
+  color: #1a284e;
+  font-size: 30px;
+  text-align: center;
+  width: fit-content;
+  border-radius: 15px;
+  height: fit-content;
+  padding: 20px;
+  margin: 10px;
+}
+
+@media (max-width: 991px) {
+  .emptyDiv {
+    display: none;
+  }
+}
+
+.onefav img {
+  width: 100%;
+}
+.rowfav {
+  flex-direction: row-reverse;
+}
+.rowfav .card {
+  border-radius: 20px;
+}
+.rowfav .card .card-img-top {
+  height: 290px;
+  border-radius: 20px 20px 0 0;
+}
+.rowfav .card .card-body {
+  direction: rtl;
+  position: relative;
+}
+.rowfav .card .rate {
+  position: absolute;
+  top: 10%;
+  left: 9%;
+}
+.rowfav .card-title {
+  width: 90%;
+}
+.textFav {
+  text-align: center;
+  color: #1a284e;
+}

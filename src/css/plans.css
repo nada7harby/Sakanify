@@ -1,0 +1,92 @@
+.business {
+  font-family: Inter;
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 54.46px;
+  text-align: center;
+  color: #1a284e;
+  padding-bottom: 20px;
+}
+
+.plansContainer {
+  background-color: #f3f3f3;
+  direction: rtl;
+  padding: 100px 0 32px 0;
+}
+
+.plansParent {
+  display: flex;
+}
+
+.plan {
+  width: 85%;
+  /* height: 470px; */
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.planHeader {
+  text-align: center;
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px 10px;
+}
+.plan1Header {
+  background-color: #1a284e;
+}
+.plan2Header {
+  background-color: #ddb20c;
+}
+.planHeader p {
+  text-align: center;
+}
+
+.planBody {
+  padding: 20px 10px;
+  line-height: 30px;
+}
+
+.planBody span {
+  font-weight: bolder;
+}
+
+.planBtn {
+  display: block;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  margin: 36px 20% 0px 50%;
+}
+
+.plan1Btn,
+.plan3Btn {
+  background-color: #1a284e;
+}
+.plan2Btn {
+  background-color: #ddb20c;
+}
+.btnSend{
+  background-color: #1a284e;
+  display: block;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+   margin: 0px 20% 10px 50%; 
+}
+.plans input[type="radio"]:checked + label {
+  background-color:#1a284e;
+}
+.plans input {
+  visibility: hidden;
+}
+/* .plan1Btn,
+           .plan2Btn
+           {
+               margin-top: 40px;
+           } */

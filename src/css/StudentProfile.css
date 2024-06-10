@@ -1,126 +1,126 @@
 body {
-        background-color: #F3F3F3;
+  background-color: #F3F3F3;
 }
 
 
 
 .studentContainer {
-        padding: 0 65px;
+  padding: 0 65px;
 /*         margin: 165px auto; */
 }
 
 
 
 .studentRow{
-        /* background-color: red; */
-        direction: rtl;
-        display: flex;
-        justify-content: space-between;
-        /* padding: 150px; */
+  /* background-color: red; */
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 150px; */
 /*         margin: 165px auto; */
-        border-radius: 30px;
-        padding:120px 0px ;
+  border-radius: 30px;
+  padding:120px 0px ;
 }
 
 
 
 .studentCol h2 {
-        margin: auto;
+  margin: auto;
 }
 
 .studentData {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        margin: 20px ;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin: 20px ;
 }
 
 
 .studentData img {
-        margin-left: 20px;
+  margin-left: 20px;
 
 }
 .studentData span {
-        font-size: 25px;
+  font-size: 25px;
 }
 
 .studentData i {
-        font-size: 30px;
-        margin-left: 5%;
+  font-size: 30px;
+  margin-left: 5%;
 }
 
 
 
 .exclamation{
-        border:  1px solid #000;
-        border-radius: 50%;
-        padding: 10px 15px;
+  border:  1px solid #000;
+  border-radius: 50%;
+  padding: 10px 15px;
 }
 
 
 
 .student {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #FFF;
-        border: 1px solid #000;
-        border-radius: 15px;
-        padding: 20px;
-        width: 100%;
-        height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  border: 1px solid #000;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+  height: fit-content;
 }
 
-.studentImg {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
+.studentImg img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }
 
 .student h2 {
-        color: #DDB20C;
-        font-size: 25px;
+  color: #DDB20C;
+  font-size: 25px;
 }
 .student p {
-        font-size: 20px;
+  font-size: 20px;
 }
 
 .studentData .password input{
- width: 92%;
-  padding: 0px 15px 10px 15px;
-  border: 2px solid transparent;
-  border-bottom: 2px solid #d3d3d3;
-  appearance: unset;
-  -moz-appearance: unset;
-  -webkit-appearance: unset;
-  -o-appearance: unset;
-  -ms-appearance: unset;
-  -moz-outline: none;
-  -webkit-outline: none;
-  -o-outline: none;
-  -ms-outline: none;
-  font-family: "Nunito", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #333;
+width: 92%;
+padding: 0px 15px 10px 15px;
+border: 2px solid transparent;
+border-bottom: 2px solid #d3d3d3;
+appearance: unset;
+-moz-appearance: unset;
+-webkit-appearance: unset;
+-o-appearance: unset;
+-ms-appearance: unset;
+-moz-outline: none;
+-webkit-outline: none;
+-o-outline: none;
+-ms-outline: none;
+font-family: "Nunito", sans-serif;
+font-size: 16px;
+font-weight: 700;
+color: #333;
 background-color:#f3f3f3;
 border:none;
 }
 .studentData .password {
-  position: relative;
+position: relative;
 }
 .studentData .password i.eye {
-  position: absolute;
-  color: #1a284e;
-  left: -1% !important;
-  font-size:17px !important;     
-  top: 14%;
+position: absolute;
+color: #1a284e;
+left: -1% !important;
+font-size:17px !important;     
+top: 14%;
 }
 
 @media (max-width:991px)
 {
-        .emptyDiv {
-                display: none;
-        }
+  .emptyDiv {
+          display: none;
+  }
 }
