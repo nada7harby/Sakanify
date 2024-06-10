@@ -46,7 +46,7 @@ function Footer() {
               </p>
             </div>
           </div>
-          <div className="row justify-content-center m-0">
+          {/* <div className="row justify-content-center m-0">
             <div className="col-lg-2 col-6">
               <Link to="/">
                 <img className="pay" src={fawray} />
@@ -57,7 +57,7 @@ function Footer() {
                 <img className="pay" src={paymob} />
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
