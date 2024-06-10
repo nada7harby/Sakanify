@@ -14,7 +14,13 @@ import gmail from "../img/gmail.png";
 import { Link } from "react-router-dom";
 
 function LoginForAll() {
+  var pass = document.getElementById("password");
+  
   const [password, setPassword] = useState("");
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -48,8 +54,8 @@ function LoginForAll() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    localStorage.setItem("password", JSON.stringify(pass.value));
     // localStorage.setItem("formData", JSON.stringify(formData));
-   
 
     fetch("https://sakanify.onrender.com/api/v1/students/login", {
       method: "POST",
@@ -67,16 +73,17 @@ function LoginForAll() {
         localStorage.setItem("formData", JSON.stringify(data.token));
         localStorage.setItem("userid", JSON.stringify(data.data.student.id));
         localStorage.setItem("role", JSON.stringify(data.data.student.role));
-        localStorage.setItem("count", JSON.stringify(data.data.student.postCounter));
+        localStorage.setItem(
+          "count",
+          JSON.stringify(data.data.student.postCounter)
+        );
         // //  localStorage.setItem('formData', JSON.stringify({ key: 'value' }));
         // console.log(localStorage.getItem("formData"));
-        if(data.status==="success")
-          {
-            Swal.fire("لقد تم تسجيل الدخول");
-          }
-          else{
-            console.log("no")
-          }
+        if (data.status === "success") {
+          Swal.fire("لقد تم تسجيل الدخول");
+        } else {
+          console.log("no");
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -168,7 +175,6 @@ function LoginForAll() {
                       value="تسجيل"
                     />
                   </div>
-                 
                 </div>
               </form>
             </div>
