@@ -20,9 +20,10 @@ import Check_email from "./component/Check_email.js";
 import Form from "./component/Form.js";
 import MyComponent from "./component/Test.js";
 import Plans from "./component/Plan.js";
+import RoomsSearch from "./component/RoomSearched.js";
+
 import { ThreeDots } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
-
 
 function App() {
   localStorage.setItem("password", "");
@@ -72,10 +73,20 @@ function App() {
               <Route index path="/form" Component={Form} />
               <Route index path="/Check_email" Component={Check_email} />
               <Route index path="/Parcode" Component={ParCode} />
-              <Route index path="/Change_password" Component={Change_password} />
-              <Route index path="/Room_after_search" Component={Room_after_search} />
+              <Route
+                index
+                path="/Change_password"
+                Component={Change_password}
+              />
+              <Route
+                index
+                path="/Room_after_search"
+                Component={Room_after_search}
+              />
               <Route index path="/MyComponent" Component={MyComponent} />
               <Route index path="/Plan" Component={Plans} />
+              <Route index path="/RoomsSearch" Component={RoomsSearch} />
+              <Route path="Rooms/:roomId" Component={RoomDetails} />
             </Routes>
           </Router>
         </div>

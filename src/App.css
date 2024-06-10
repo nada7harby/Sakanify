@@ -1,6 +1,7 @@
 .App {
   /* text-align: center; */
 }
+
 .body{
   padding: 0!important;
 }
@@ -19,7 +20,7 @@
   overflow: hidden;
 }
 .load img{
-width:80%;
+width:90%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
