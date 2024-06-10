@@ -2,15 +2,13 @@
   border: none !important;
 }
 .tab-pane .card .card-img-top {
-  border-radius: 20px 20px 0 0;
-  height: 290px;
-}
-.tab-pane .card{
-  border-radius: 20px 20px 0 0;
+  height: 220px;
+  border-radius: 20px;
 }
 .tab-pane .card .card-body {
   direction: rtl;
   position: relative;
+  background-color: #f3f3f3;
 }
 .nav-tabs {
   display: flex;
@@ -61,14 +59,20 @@
 }
 .img-card {
   position: relative;
+  background-color: #f3f3f3;
 }
 .book {
   position: absolute;
   right: -2%;
   bottom: -3%;
-  width: 41%;
-  height: 38%;
+  width: 100px;
+  height: 90px;
 }
+
+.book:hover {
+  rotate: 10deg;
+}
+
 .swal2-popup{
   background-color: #1a284e;
   
@@ -86,11 +90,10 @@
 }
 .OwImg_book {
   position: absolute;
-  width: 15%;
-  height: 19%;
-
+  width: 35px;
+  height: 35px;
   right: 9%;
-  bottom: 6%;
+  bottom: 9%;
   border-radius: 50%;
 }
 .card .active {
@@ -143,4 +146,31 @@
   .nav-tabs a{
     font-size: 11px;
   }
+}
+
+
+.card-title
+{
+  width: 70% !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  line-height: 24.2px !important;
+  color: black !important;
+}
+.card-price
+{
+  font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 24.2px !important;
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.Star-img { 
+  width: 25px; 
+  height: 25px; 
+  top: 355px; 
+  left: 81px; 
+  gap: 0px; 
+  opacity: 0px; 
+  margin-left: 3px; 
 }
