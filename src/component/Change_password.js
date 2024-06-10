@@ -15,6 +15,45 @@ import gmail from "../img/gmail.png";
 import { Link } from "react-router-dom";
 
 function Change_password() {
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Swal.fire("لقد تم تغير الرقم السري");
+
+    // localStorage.setItem("formData", JSON.stringify(formData));
+    fetch("https://sakanify.onrender.com/api/v1/students/resetPassword", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log(data.status)
+        if(data.status==="success")
+          {
+           Swal.fire("your password is changed")
+          }
+          else{
+            console.log("no")
+          }
+        
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
   var pass = document.getElementById("password");
   var pass_sure = document.getElementById("password-sure");
   var check = document.getElementById("check");
@@ -24,17 +63,13 @@ function Change_password() {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (pass.value === pass_sure.value && pass.value !== "") {
-      Swal.fire("Your  password changed");
-      check.style.display = "none";
-    } else {
-      check.style.display = "block";
-    }
+  // const handleSubmit = (event) => {
+    
+  //   event.preventDefault();
+   
+  //   localStorage.setItem("password", password);
 
-    localStorage.setItem("password", password);
-  };
+  // };
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -105,6 +140,19 @@ function Change_password() {
                     style={{ width: "100%" }}
                   >
                     <input
+                      type="text"
+                      name="password"
+                      id="password"
+                      className="input-text pass"
+                      placeholder=" ادخل الرمز"
+                      required
+                    />
+                  </div>
+                  <div
+                    className=" form-row   col-6 password"
+                    style={{ width: "100%" }}
+                  >
+                    <input
                       type={showPassword ? "text" : "password"}
                       name="password"
                       id="password"
@@ -118,28 +166,7 @@ function Change_password() {
                       onClick={togglePasswordVisibility}
                     ></i>
                   </div>
-                  <div
-                    className=" form-row   col-6 password"
-                    style={{ width: "100%" }}
-                  >
-                    <input
-                      type={showPassword ? "text" : "password"}
-                      name="password"
-                      id="password-sure"
-                      className="input-text pass"
-                      placeholder="تاكيد كلمة السر الجديدة"
-                      required
-                      onChange={handlePasswordChange}
-                    />
-                    <i
-                      class="fa-solid fa-eye"
-                      onClick={togglePasswordVisibility}
-                    ></i>
-                    <span className="check" id="check">
-                      {" "}
-                      يجب ان تكون كلمه المرور وتاكيد كلمه المرور متطابقين
-                    </span>
-                  </div>
+
                   <div className=" form-row  col-6-last">
                     <input
                       type="submit"

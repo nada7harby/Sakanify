@@ -3,14 +3,21 @@ import "../css/MainSec.css";
 import Main1 from "../img/main1.jpeg";
 import Main2 from "../img/main2.jpeg";
 import Main3 from "../img/main3.jpeg";
+import { motion } from "framer-motion";
+
 function MainSec() {
   return (
     <>
-      <div className="container mainSec">
+      <motion.div
+        className="container mainSec"
+        initial={{ scale: 0.8 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1, type: "spring", stiffness: 400 }}
+      >
         <div className="row m-0 justify-content-between mainSec-content ">
           <div className="col-lg-6 row-img">
             <div className="row cols-img  ">
-              <div className="col-6 col1-img"> 
+              <div className="col-6 col1-img">
                 <div className="row images1 justify-content-between">
                   <div className="col-6 ">
                     <img src={Main1} alt="img" className="Main1" />
@@ -43,7 +50,7 @@ function MainSec() {
             <button>تصفح</button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -29,13 +29,12 @@ function LoginOwner() {
   const [formData, setFormData] = useState({
     name: "",
     password: "",
-    nationalId:"",
-    phone:"",
-    faculty:"",
-    email:"",
-    gender:"",
-    role:"student",
 
+    phone: "",
+
+    email: "",
+
+    role: "owner",
   });
 
   const handleChange = (e) => {
@@ -43,11 +42,9 @@ function LoginOwner() {
       ...formData,
       [e.target.name]: e.target.value,
       [e.target.password]: e.target.value,
-      [e.target.nationalId]: e.target.value,
-      [e.target.phone]: e.target.value,
-      [e.target.faculty]: e.target.value,
+
       [e.target.email]: e.target.value,
-      [e.target.gender]: e.target.value,
+
       // [e.target.role]: e.target.value,
     });
   };
@@ -68,7 +65,6 @@ function LoginOwner() {
       .then((data) => {
         // Handle API response
         console.log(data);
-        
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -110,7 +106,8 @@ function LoginOwner() {
             <div className="col-lg-6">
               <form
                 className="form-detail "
-                action="#"
+                id="myFormId"
+                action="https://sakanify.onrender.com/api/v1/students/signup"
                 method="post"
                 onSubmit={handleSubmit}
               >
@@ -147,21 +144,31 @@ function LoginOwner() {
                   <div className=" form-row  col-6 " style={{ width: "100%" }}>
                     <input
                       type="text"
-                      name="full-name"
+                      name="name"
                       id="full-name"
                       className="input-text user"
                       placeholder="الاسم"
                       required
+                      value={formData.name}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setFormData({ ...formData, name: e.target.value });
+                      }}
                     />
                   </div>
                   <div className=" form-row  col-6" style={{ width: "100%" }}>
                     <input
                       type="text"
-                      name="your-email"
+                      name="email"
                       id="your-email"
                       className="input-text "
                       placeholder="البريد الالكتروني"
                       pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+                      value={formData.email}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setFormData({ ...formData, email: e.target.value });
+                      }}
                     />
                   </div>
                   <div
@@ -175,7 +182,12 @@ function LoginOwner() {
                       className="input-text pass"
                       placeholder="كلمة السر"
                       required
-                      onChange={handlePasswordChange}
+                      //onChange={handlePasswordChange}
+                      value={formData.password}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setFormData({ ...formData, password: e.target.value });
+                      }}
                     />
                     <i
                       class="fa-solid fa-eye"
@@ -190,8 +202,18 @@ function LoginOwner() {
                       className="input-text user"
                       placeholder="رقم الهاتف"
                       required
+                      value={formData.phone}
+                      onChange={(e) => {
+                        console.log(e.target.value);
+                        setFormData({ ...formData, phone: e.target.value });
+                      }}
                     />
-                    <input type="text" name="role" value="owner" className="d-none"/>
+                    <input
+                      type="text"
+                      name="role"
+                      value="owner"
+                      className="d-none"
+                    />
                   </div>
 
                   <div className=" form-row  col-6-last">
@@ -237,7 +259,7 @@ function LoginOwner() {
                 </Link>
                 <Link to="/login">
                   {" "}
-                  <div>تسجيل الدخول</div>
+                  <div>تسجيل الدخول </div>
                 </Link>
               </div>
             </div>

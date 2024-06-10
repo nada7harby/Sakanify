@@ -8,33 +8,55 @@ import loginunder2 from "../img/logo2.png";
 import Plogin from "../img/BGlogin.jpeg";
 import owner from "../img/owner-image.png";
 import user from "../img/User-owner.png";
-import twiter from "../img/twitter.png";
-import insta from "../img/inst.png";
-import face from "../img/face.png";
-import gmail from "../img/gmail.png";
-import { Link } from "react-router-dom";
+
+import { json, Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 function Check_email() {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+   
+    // localStorage.setItem("formData", JSON.stringify(formData));
+    fetch("https://sakanify.onrender.com/api/v1/students/forgotPassword", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log(data.status)
+        if(data.status==="success")
+          {
+            navigate('/Change_password');
+          }
+          else{
+            console.log("no")
+          }
+        
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
   var pass = document.getElementById("password");
   var pass_sure = document.getElementById("password-sure");
   var check = document.getElementById("check");
-  const [password, setPassword] = useState("");
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (pass.value === pass_sure.value && pass.value !== "") {
-      Swal.fire("Your  password changed");
-      check.style.display = "none";
-    } else {
-      check.style.display = "block";
-    }
-
-    localStorage.setItem("password", password);
-  };
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -103,26 +125,23 @@ function Check_email() {
                   <div className=" form-row  col-6" style={{ width: "100%" }}>
                     <input
                       type="email"
-                      name="your-email"
+                      name="email"
                       id="your-email"
                       className="input-text "
                       placeholder=" البريد الالكتروني"
                       pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+                      onChange={handleChange}
+                    />
+                  </div>{" "}
+                  <div className=" form-row  col-6-last">
+                    <input
+                      type="submit"
+                      name="register"
+                      className="register"
+                      value="تسجيل"
+                      // onClick={}
                     />
                   </div>
-
-                  <Link to="/parcode">
-                    {" "}
-                    <div className=" form-row  col-6-last">
-                      <input
-                        type="submit"
-                        name="register"
-                        className="register"
-                        value="تسجيل"
-                        // onClick={}
-                      />
-                    </div>
-                  </Link>
                 </div>
               </form>
             </div>

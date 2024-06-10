@@ -9,6 +9,8 @@ import { useState } from "react";
 
 function SearchBar() {
   const [serviceType, setServiceType] = useState("");
+  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue2, setSelectedValue2] = useState('');
 
   const handleServiceTypeChange = (selectedType) => {
     setServiceType(selectedType);
@@ -18,6 +20,14 @@ function SearchBar() {
     // Here you can use the selected serviceType for further actions, such as filtering search results
     console.log("Selected Service Type:", serviceType);
   };
+  const handleDropdownItemClick = (value) => {
+    setSelectedValue(value);
+    localStorage.setItem("selectedDropdownValue", value); // Optional: Store in localStorage
+  };
+  const handleDropdownItemClick2 = (value2) => {
+    setSelectedValue2(value2);
+    localStorage.setItem("selectedDropdownValue2", value2); // Optional: Store in localStorage
+  };
   return (
     <>
       <div className="container">
@@ -25,7 +35,7 @@ function SearchBar() {
           <div className="col-lg-7 col">
             <div className="row cols-search justify-content-around  ">
               <div className="col-lg-3 col-6 mt-2 mb-2">
-                <Link to="/Rooms">
+                <Link to="/RoomsSearch">
                   <button className="btn-search" onClick={handleSearch}>بحث</button>
                 </Link>
               </div>
@@ -41,19 +51,19 @@ function SearchBar() {
                 </div>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item">غرفة لفرد</Link>
+                    <Link className="dropdown-item" onClick={() => handleDropdownItemClick2('غرفة لفرد')}>غرفة لفرد</Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item">غرفة لفردين</Link>
+                    <Link className="dropdown-item" onClick={() => handleDropdownItemClick2('غرفة لفردين')}>غرفة لفردين</Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item">غرفة لثلاث افراد</Link>
+                    <Link className="dropdown-item" onClick={() => handleDropdownItemClick2('غرفة لثلاث افراد')}>غرفة لثلاث افراد</Link>
                   </li>
                 </ul>
               </div>
@@ -69,31 +79,31 @@ function SearchBar() {
                 </div>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item">كوامل</Link>
+                    <Link className="dropdown-item" onClick={() => handleDropdownItemClick('كوامل')}>كوامل</Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item">محافظة </Link>
+                    <Link className="dropdown-item" onClick={() => handleDropdownItemClick('محافظة')}>محافظة </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item"> موقف بحري</Link>
+                    <Link className="dropdown-item" onClick={() => handleDropdownItemClick('الترعة المردومة')}>الترعة المردومة</Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item"> الزهراء </Link>
+                    <Link className="dropdown-item" onClick={() => handleDropdownItemClick('الزهراء')}> الزهراء </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item"> شارع الجمهورية </Link>
+                    <Link className="dropdown-item" onClick={() => handleDropdownItemClick('شارع الجمهورية')}> شارع الجمهورية </Link>
                   </li>
                 </ul>
               </div>

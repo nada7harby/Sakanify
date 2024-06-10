@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Tab, Nav } from "react-bootstrap";
 import "../css/Tab.css";
 import Swal from "sweetalert2";
-
+import { delay, motion } from "framer-motion";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import room1 from "../img/room1.png";
@@ -146,7 +146,7 @@ function Room_Tab() {
         setSelectedRooms([...SelectedRooms, roomId]);
       }
     } else {
-      Swal.fire("You should login at first ");
+      Swal.fire("يجب ان تسجل الدخول في البداية ");
     }
   };
   const [showModal, setShowModal] = useState(Array(arr.length).fill(false));
@@ -154,7 +154,7 @@ function Room_Tab() {
   const handleShow = (index) => {
     setShowModal((prev) => {
       if (localStorage.getItem("password") === "") {
-        Swal.fire("You should login at first ");
+        Swal.fire("يجب ان تسجل الدخول في البداية ");
       }
       const updatedState = [...prev];
       updatedState[index] = true;
@@ -295,7 +295,7 @@ function Room_Tab() {
     );
   });
   return (
-    <div className="container">
+    <motion.div className="container" initial={{ x: -250 }} animate={{ x: 0 }} transition={{delay:3}}>
       <Tab.Container activeKey={activeTab} onSelect={handleTabSelect}>
         <Nav variant="tabs">
           <Nav.Item>
@@ -320,7 +320,7 @@ function Room_Tab() {
           </Tab.Pane>
         </Tab.Content>
       </Tab.Container>
-    </div>
+    </motion.div>
   );
 }
 

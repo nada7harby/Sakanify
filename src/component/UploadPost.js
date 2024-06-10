@@ -4,7 +4,6 @@ import image from "../img/Image.jpg";
 import upload from "../img/upload_img.jpg";
 import Nav from "./Nav";
 import Footer from "./Footer";
-import Cookies from "js-cookie";
 
 function UploadPost() {
   var token = JSON.parse(localStorage.getItem("formData"));
