@@ -165,12 +165,15 @@ function Rooms() {
                       className="Owner-Model-Img"
                     />
                     <h3 className="mt-3 font-Weigth">{room.name}</h3>
-                    <p>
-                      <img
-                        src={HostIcon}
-                        className="host-icon"
-                        alt="host title"
-                      />
+                    
+<p className="text-center"> 
+                      <img 
+                        src={HostIcon} 
+                        className="host-icon" 
+                        alt="host title" 
+                      /> 
+                      {HostTilteFunc(room.ratingsAverage)} 
+                    </p>
                       {HostTilteFunc(room.ratingsAverage)}
                     </p>
                   </Col>
