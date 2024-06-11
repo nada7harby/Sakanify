@@ -308,12 +308,12 @@ function Login() {
                       value="تسجيل"
                     />
                   </div>
-                  <div className="contact">
+                  {/* <div className="contact">
                     <img src={face} alt="img" />
                     <img src={gmail} alt="img" />
                     <img src={insta} alt="img" />
                     <img src={twiter} alt="img" />
-                  </div>
+                  </div> */}
                 </div>
               </form>
             </div>
