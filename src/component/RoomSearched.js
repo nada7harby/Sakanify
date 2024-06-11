@@ -176,7 +176,7 @@ function RoomsSearch() {
                       className="Owner-Model-Img"
                     />
                     <h3 className="mt-3 font-Weigth">{room.name}</h3>
-                    <p>
+                    <p className="text-center">
                       <img
                         src={HostIcon}
                         className="host-icon"

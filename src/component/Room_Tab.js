@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Tab, Nav } from "react-bootstrap";
 import "../css/Tab.css";
 import Swal from "sweetalert2";
-
+import CloseButton from "react-bootstrap/CloseButton";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import book from "../img/Book.png";
@@ -16,7 +16,7 @@ function Room_Tab() {
   const [activeTab, setActiveTab] = useState("tab1");
   const [roomData, setRoomData] = useState([]);
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const [showModal, setShowModal] = useState({});
+  // const [showModal, setShowModal] = useState({});
   const RateStar = (rate) => (rate > 4 ? starImg : HalfStar);
 
 
@@ -59,9 +59,23 @@ function Room_Tab() {
     setShowModal((prev) => ({ ...prev, [roomId]: true }));
   };
 
-  const handleClose = (roomId) => {
-    setShowModal((prev) => ({ ...prev, [roomId]: false }));
+  // const handleClose = (roomId) => {
+  //   setShowModal((prev) => ({ ...prev, [roomId]: false }));
+  // };
+  const [showModal, setShowModal] = useState([false, false, false]);
+
+  const handleClose = (index) => {
+    setShowModal((prev) => {
+      if (!Array.isArray(prev)) {
+        // If prev is not an array, return the previous state
+        return prev;
+      }
+      const updatedState = [...prev];
+      updatedState[index] = false;
+      return updatedState;
+    });
   };
+
 
   const renderRooms = () => {
     if (!roomData || roomData.length === 0) {
@@ -80,22 +94,26 @@ function sliceTextUntilComma(text) {
     return roomData.slice(0,6).map((ele) => (
       <div className="col-lg-3 col-sm-4 col-10 m-4" key={ele._id}>
         <div className="card">
-          <div className="img-card">
+          <div className="img-card"  onClick={() => handleShow(ele._id)}>
             <img className="card-img-top" src={ele.imageCoverUrl} alt="Card" />
             <img
               className="book"
               src={book}
               alt="book"
-              onClick={() => handleShow(ele._id)}
+             
             />
             <img src={ele.userImage} class="OwImg_book" alt="img"></img>
 
 
             <Modal show={showModal[ele._id]} onHide={() => handleClose(ele._id)}>
-              <Modal.Header closeButton>
+              <Modal.Header >
                 <Modal.Title>تفاصيل عن المالك</Modal.Title>
               </Modal.Header>
               <Modal.Body>
+              <CloseButton 
+                onClick={() => handleClose(ele._id)} 
+                className="mb-3" 
+              />
                 <div className="container">
                   <div className="row m-0 info-owner pb-2 justify-content-between">
                     <div className="col-7 Oimg">

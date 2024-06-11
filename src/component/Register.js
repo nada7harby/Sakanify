@@ -71,7 +71,7 @@ function Login() {
         console.log(data);
         localStorage.setItem("formData", JSON.stringify(data.token));
         if (data.status === "success") {
-          navigate('/login');
+          navigate('/');
         } else {
           console.log("no");
         }

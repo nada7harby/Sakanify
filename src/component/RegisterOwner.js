@@ -70,7 +70,7 @@ function LoginOwner() {
         // Handle API response
         console.log(data);
         if (data.status === "success") {
-          navigate('/login');
+          navigate('/');
         } else {
           console.log("no");
         }
