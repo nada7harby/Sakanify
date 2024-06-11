@@ -172,3 +172,12 @@
   padding-right: 5px;
   border-right: 0.5px solid rgba(141, 141, 141, 1)
 } */
+.star-rating .star {
+  /* font-size: 2rem; Adjust size as needed */
+  cursor: pointer;
+  color: rgba(26, 40, 78, 1);
+}
+
+.star-rating .star.selected {
+  color: #ddb20c;
+}
