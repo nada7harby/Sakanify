@@ -12,8 +12,11 @@ import face from "../img/face.png";
 import gmail from "../img/gmail.png";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useNavigate } from 'react-router-dom';
 
 function LoginOwner() {
+  const navigate = useNavigate();
+
   const [password, setPassword] = useState("");
 
   const handlePasswordChange = (event) => {
@@ -50,6 +53,7 @@ function LoginOwner() {
   };
 
   const handleSubmit = (e) => {
+    
     e.preventDefault();
     // localStorage.setItem("password", password);
     // Swal.fire("Your Login is Done");
@@ -65,6 +69,11 @@ function LoginOwner() {
       .then((data) => {
         // Handle API response
         console.log(data);
+        if (data.status === "success") {
+          navigate('/');
+        } else {
+          console.log("no");
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -224,12 +233,12 @@ function LoginOwner() {
                       value="تسجيل"
                     />
                   </div>
-                  <div className="contact">
+                  {/* <div className="contact">
                     <img src={face} alt="img" />
                     <img src={gmail} alt="img" />
                     <img src={insta} alt="img" />
                     <img src={twiter} alt="img" />
-                  </div>
+                  </div> */}
                 </div>
               </form>
             </div>
@@ -259,7 +268,7 @@ function LoginOwner() {
                 </Link>
                 <Link to="/login">
                   {" "}
-                  <div>تسجيل الدخول  </div>
+                  <div>تسجيل الدخول </div>
                 </Link>
               </div>
             </div>
