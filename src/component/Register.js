@@ -11,6 +11,7 @@ import face from "../img/face.png";
 import gmail from "../img/gmail.png";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useNavigate } from 'react-router-dom';
 
 var logo = document.getElementById("logo");
 // if (window.innerWidth > 200) {
@@ -18,6 +19,8 @@ var logo = document.getElementById("logo");
 // }
 
 function Login() {
+  const navigate = useNavigate();
+
   const [password, setPassword] = useState("");
 
   const handlePasswordChange = (event) => {
@@ -51,8 +54,9 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // localStorage.setItem("password", password);
-    // Swal.fire("Your Login is Done");
+     localStorage.setItem("password", password);
+    localStorage.setItem("formData", JSON.stringify(formData));
+    Swal.fire("Your Login is Done");
     // Send data to API
     fetch("https://sakanify.onrender.com/api/v1/students/signup", {
       method: "POST",
@@ -65,6 +69,12 @@ function Login() {
       .then((data) => {
         // Handle API response
         console.log(data);
+        localStorage.setItem("formData", JSON.stringify(data.token));
+        if (data.status === "success") {
+          navigate('/');
+        } else {
+          console.log("no");
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -330,7 +340,7 @@ function Login() {
                 </Link>
                 <Link to="/login">
                   {" "}
-                  <div> تسجيل الدخول </div>
+                  <div>تسجيل الدخول</div>
                 </Link>
               </div>
             </div>
