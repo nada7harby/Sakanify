@@ -289,9 +289,7 @@ function Rooms() {
                 onChange={(e) => setPriceSearch(e.target.value)}
               />
             </div>
-            <div className="SearchIconDiv">
-              <img src={SearchIcon} alt="search Icon" className="SearchIcon" />
-            </div>
+            
           </div>
           <Row>{RoomsAfterSearch()}</Row>
         </Container>
