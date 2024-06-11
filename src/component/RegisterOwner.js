@@ -259,7 +259,7 @@ function LoginOwner() {
                 </Link>
                 <Link to="/login">
                   {" "}
-                  <div>تسجيل الدخول </div>
+                  <div>تسجيل الدخول  </div>
                 </Link>
               </div>
             </div>
